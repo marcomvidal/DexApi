@@ -1,0 +1,6 @@
+{:database
+ {:dbtype "postgresql"
+  :host "localhost"
+  :dbname "dex"
+  :username "postgres"
+  :password "postgres"}}

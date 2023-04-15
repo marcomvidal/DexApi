@@ -1,0 +1,3605 @@
+; This is the Calva evaluation results output window.
+; TIPS: The keyboard shortcut `ctrl+alt+o o` shows and focuses this window
+;   when connected to a REPL session.
+; Please see https://calva.io/output/ for more info.
+; Happy coding! ♥️
+
+; Jacking in...
+; Connecting using "Leiningen" project type.
+; You can make Calva auto-select this:
+; "calva.autoSelectReplConnectProjectType": "Leiningen"
+;   - See https://calva.io/connect/#auto-select-project-type
+; 
+; Starting Jack-in Terminal: lein update-in :dependencies conj '[nrepl,"1.0.0"]' -- update-in :plugins conj '[cider/cider-nrepl,"0.28.5"]' -- update-in '[:repl-options,:nrepl-middleware]' conj '["cider.nrepl/cider-middleware"]' -- with-profile +dev,+uberjar repl :headless
+; Hooking up nREPL sessions...
+; Connected session: clj
+; TIPS:
+;   - You can edit the contents here. Use it as a REPL if you like.
+;   - `alt+enter` evaluates the current top level form.
+;   - `ctrl+enter` evaluates the current form.
+;   - `alt+up` and `alt+down` traverse up and down the REPL command history
+;      when the cursor is after the last contents at the prompt
+;   - Clojure lines in stack traces are peekable and clickable.
+clj꞉dex-api.server꞉>  ; Use `alt+enter` to evaluate
+; Jack-in done.
+clj꞉dex-api.server꞉> 
+;; Starting database
+;; Starting service-map
+
+Creating your [DEV] server...
+;; Starting server
+#'dex-api.server/app
+clj꞉dex-api.server꞉> 
+; Syntax error compiling at (src/dex_api/people/repository.clj:43:16).
+; Unable to resolve symbol: read-config in this context
+clj꞉dex-api.people.repository꞉> 
+;; Stopping server
+;; Stopping service-map
+;; Stopping database
+{:database
+ {:settings {:dbtype "postgresql", :host "localhost", :dbname "dex", :username "postgres", :password "postgres"},
+  :connection nil},
+ :service-map
+ {:env :dev,
+  :db
+  {:settings {:dbtype "postgresql", :host "localhost", :dbname "dex", :username "postgres", :password "postgres"},
+   :connection
+   {:connectable #object[com.zaxxer.hikari.HikariDataSource 0x13fd7d00 "HikariDataSource (HikariPool-1)"],
+    :options {:builder-fn #function[next.jdbc.result-set/as-unqualified-lower-maps]}}},
+  :map nil},
+ :server
+ {:service
+  {:env :dev,
+   :db
+   {:settings {:dbtype "postgresql", :host "localhost", :dbname "dex", :username "postgres", :password "postgres"},
+    :connection
+    {:connectable #object[com.zaxxer.hikari.HikariDataSource 0x13fd7d00 "HikariDataSource (HikariPool-1)"],
+     :options {:builder-fn #function[next.jdbc.result-set/as-unqualified-lower-maps]}}},
+   :map
+   {:io.pedestal.http/port 8080,
+    :io.pedestal.http/service-fn #function[io.pedestal.http.impl.servlet-interceptor/interceptor-service-fn/fn--12922],
+    :io.pedestal.http/host "0.0.0.0",
+    :io.pedestal.http/secure-headers
+    {:content-security-policy-settings
+     {:default-src "'self'",
+      :style-src "'self' 'unsafe-inline'",
+      :script-src "'self' 'unsafe-inline'",
+      :img-src "'self' 'unsafe-inline' data: https://validator.swagger.io",
+      :object-src "'none'"}},
+    :io.pedestal.http/type :jetty,
+    :io.pedestal.http/start-fn #function[io.pedestal.http.jetty/server/fn--13146],
+    :env :dev,
+    :io.pedestal.http/allowed-origins {:creds true, :allowed-origins #function[clojure.core/constantly/fn--5672]},
+    :io.pedestal.http/resource-path "/public",
+    :io.pedestal.http/interceptors
+    [{:name :io.pedestal.http.impl.servlet-interceptor/exception-debug,
+      :enter nil,
+      :leave nil,
+      :error #function[io.pedestal.http.impl.servlet-interceptor/error-debug]}
+     {:name :reitit.http/router,
+      :enter #function[reitit.http/routing-interceptor/fn--2143],
+      :leave #function[reitit.http/routing-interceptor/fn--2148],
+      :error nil}
+     {:name :dex-api.interceptors.component/system-component-interceptor,
+      :enter #function[dex-api.interceptors.component/component-interceptor/fn--269],
+      :leave #function[dex-api.interceptors.component/component-interceptor/fn--271],
+      :error #function[dex-api.interceptors.component/component-interceptor/fn--273]}],
+    :io.pedestal.http/routes [],
+    :io.pedestal.http/servlet
+    #object[io.pedestal.http.servlet.FnServlet 0xbb67051 "io.pedestal.http.servlet.FnServlet@bb67051"],
+    :io.pedestal.http/server
+    #object[org.eclipse.jetty.server.Server 0x4fc66f13 "Server@4fc66f13{STOPPED}[9.4.48.v20220622]"],
+    :io.pedestal.http/join? false,
+    :io.pedestal.http/stop-fn #function[io.pedestal.http.jetty/server/fn--13148]}},
+  :jetty nil}}
+clj꞉dex-api.server꞉> 
+; Syntax error compiling at (src/dex_api/people/repository.clj:43:16).
+; Unable to resolve symbol: read-config in this context
+clj꞉dex-api.people.repository꞉> 
+; Evaluating file: repository.clj
+nil
+clj꞉dex-api.people.repository꞉> 
+; Syntax error compiling at (src/dex_api/people/repository.clj:45:5).
+; Unable to resolve symbol: connection in this context
+clj꞉dex-api.people.repository꞉> 
+; Execution error (ExceptionInfo) at next.jdbc.connection/spec->url+etc (connection.clj:200).
+; Unknown dbtype: , and :classname not provided.
+clj꞉dex-api.people.repository꞉> 
+{:database {:dbtype "postgresql", :host "localhost", :dbname "dex", :username "postgres", :password "postgres"}}
+clj꞉dex-api.people.repository꞉> 
+{:database {:dbtype "postgresql", :host "localhost", :dbname "dex", :username "postgres", :password "postgres"}}
+clj꞉dex-api.people.repository꞉> 
+; Execution error (ExceptionInfo) at next.jdbc.connection/spec->url+etc (connection.clj:200).
+; Unknown dbtype: , and :classname not provided.
+clj꞉dex-api.people.repository꞉> 
+{:database {:dbtype "postgresql", :host "localhost", :dbname "dex", :username "postgres", :password "postgres"}}
+clj꞉dex-api.people.repository꞉> 
+{:database {:dbtype "postgresql", :host "localhost", :dbname "dex", :username "postgres", :password "postgres"}}
+clj꞉dex-api.people.repository꞉> 
+nil
+clj꞉dex-api.people.repository꞉> 
+; Evaluating file: http_out.clj
+#'dex-api.people.http-out/respond-empty
+clj꞉dex-api.people.http-out꞉> 
+; nREPL Connection was closed
+; Jacking in...
+; Connecting using "Leiningen" project type.
+; You can make Calva auto-select this:
+; "calva.autoSelectReplConnectProjectType": "Leiningen"
+;   - See https://calva.io/connect/#auto-select-project-type
+; 
+; Starting Jack-in Terminal: lein update-in :dependencies conj '[nrepl,"1.0.0"]' -- update-in :plugins conj '[cider/cider-nrepl,"0.28.5"]' -- update-in '[:repl-options,:nrepl-middleware]' conj '["cider.nrepl/cider-middleware"]' -- with-profile +dev,+uberjar repl :headless
+; Hooking up nREPL sessions...
+; Connected session: clj
+; TIPS:
+;   - You can edit the contents here. Use it as a REPL if you like.
+;   - `alt+enter` evaluates the current top level form.
+;   - `ctrl+enter` evaluates the current form.
+;   - `alt+up` and `alt+down` traverse up and down the REPL command history
+;      when the cursor is after the last contents at the prompt
+;   - Clojure lines in stack traces are peekable and clickable.
+clj꞉dex-api.server꞉> 
+; Jack-in done.
+clj꞉dex-api.server꞉> 
+;; Starting database
+;; Starting service-map
+
+Creating your [DEV] server...
+;; Starting server
+#'dex-api.server/app
+clj꞉dex-api.server꞉> 
+; Evaluating file: http_out.clj
+#'dex-api.people.http-out/respond-empty
+clj꞉dex-api.people.http-out꞉> 
+;; Stopping server
+;; Stopping service-map
+;; Stopping database
+{:database
+ {:settings {:dbtype "postgresql", :host "localhost", :dbname "dex", :username "postgres", :password "postgres"},
+  :connection nil},
+ :service-map
+ {:env :dev,
+  :db
+  {:settings {:dbtype "postgresql", :host "localhost", :dbname "dex", :username "postgres", :password "postgres"},
+   :connection
+   {:connectable #object[com.zaxxer.hikari.HikariDataSource 0x3d17f79e "HikariDataSource (HikariPool-1)"],
+    :options {:builder-fn #function[next.jdbc.result-set/as-unqualified-lower-maps]}}},
+  :map nil},
+ :server
+ {:service
+  {:env :dev,
+   :db
+   {:settings {:dbtype "postgresql", :host "localhost", :dbname "dex", :username "postgres", :password "postgres"},
+    :connection
+    {:connectable #object[com.zaxxer.hikari.HikariDataSource 0x3d17f79e "HikariDataSource (HikariPool-1)"],
+     :options {:builder-fn #function[next.jdbc.result-set/as-unqualified-lower-maps]}}},
+   :map
+   {:io.pedestal.http/port 8080,
+    :io.pedestal.http/service-fn #function[io.pedestal.http.impl.servlet-interceptor/interceptor-service-fn/fn--12922],
+    :io.pedestal.http/host "0.0.0.0",
+    :io.pedestal.http/secure-headers
+    {:content-security-policy-settings
+     {:default-src "'self'",
+      :style-src "'self' 'unsafe-inline'",
+      :script-src "'self' 'unsafe-inline'",
+      :img-src "'self' 'unsafe-inline' data: https://validator.swagger.io",
+      :object-src "'none'"}},
+    :io.pedestal.http/type :jetty,
+    :io.pedestal.http/start-fn #function[io.pedestal.http.jetty/server/fn--13146],
+    :env :dev,
+    :io.pedestal.http/allowed-origins {:creds true, :allowed-origins #function[clojure.core/constantly/fn--5672]},
+    :io.pedestal.http/resource-path "/public",
+    :io.pedestal.http/interceptors
+    [{:name :io.pedestal.http.impl.servlet-interceptor/exception-debug,
+      :enter nil,
+      :leave nil,
+      :error #function[io.pedestal.http.impl.servlet-interceptor/error-debug]}
+     {:name :reitit.http/router,
+      :enter #function[reitit.http/routing-interceptor/fn--2143],
+      :leave #function[reitit.http/routing-interceptor/fn--2148],
+      :error nil}
+     {:name :dex-api.interceptors.component/system-component-interceptor,
+      :enter #function[dex-api.interceptors.component/component-interceptor/fn--269],
+      :leave #function[dex-api.interceptors.component/component-interceptor/fn--271],
+      :error #function[dex-api.interceptors.component/component-interceptor/fn--273]}],
+    :io.pedestal.http/routes [],
+    :io.pedestal.http/servlet
+    #object[io.pedestal.http.servlet.FnServlet 0x23e417c5 "io.pedestal.http.servlet.FnServlet@23e417c5"],
+    :io.pedestal.http/server
+    #object[org.eclipse.jetty.server.Server 0x12ecfea4 "Server@12ecfea4{STOPPED}[9.4.48.v20220622]"],
+    :io.pedestal.http/join? false,
+    :io.pedestal.http/stop-fn #function[io.pedestal.http.jetty/server/fn--13148]}},
+  :jetty nil}}
+clj꞉dex-api.server꞉> 
+; Evaluating file: server.clj
+#'dex-api.components.server/new-server
+clj꞉dex-api.components.server꞉> 
+; Evaluating file: server.clj
+#'dex-api.components.server/new-server
+clj꞉dex-api.components.server꞉> 
+;; Starting database
+;; Starting service-map
+
+Creating your [DEV] server...
+;; Starting server
+#'dex-api.server/app
+clj꞉dex-api.server꞉> 
+;; Stopping server
+;; Stopping service-map
+;; Stopping database
+{:database
+ {:settings {:dbtype "postgresql", :host "localhost", :dbname "dex", :username "postgres", :password "postgres"},
+  :connection nil},
+ :service-map
+ {:env :dev,
+  :db
+  {:settings {:dbtype "postgresql", :host "localhost", :dbname "dex", :username "postgres", :password "postgres"},
+   :connection
+   {:connectable #object[com.zaxxer.hikari.HikariDataSource 0x5eac787f "HikariDataSource (HikariPool-2)"],
+    :options {:builder-fn #function[next.jdbc.result-set/as-unqualified-lower-maps]}}},
+  :map nil},
+ :server
+ {:service
+  {:env :dev,
+   :db
+   {:settings {:dbtype "postgresql", :host "localhost", :dbname "dex", :username "postgres", :password "postgres"},
+    :connection
+    {:connectable #object[com.zaxxer.hikari.HikariDataSource 0x5eac787f "HikariDataSource (HikariPool-2)"],
+     :options {:builder-fn #function[next.jdbc.result-set/as-unqualified-lower-maps]}}},
+   :map
+   {:io.pedestal.http/port 8080,
+    :io.pedestal.http/service-fn #function[io.pedestal.http.impl.servlet-interceptor/interceptor-service-fn/fn--12922],
+    :io.pedestal.http/host "0.0.0.0",
+    :io.pedestal.http/secure-headers
+    {:content-security-policy-settings
+     {:default-src "'self'",
+      :style-src "'self' 'unsafe-inline'",
+      :script-src "'self' 'unsafe-inline'",
+      :img-src "'self' 'unsafe-inline' data: https://validator.swagger.io",
+      :object-src "'none'"}},
+    :io.pedestal.http/type :jetty,
+    :io.pedestal.http/start-fn #function[io.pedestal.http.jetty/server/fn--13146],
+    :env :dev,
+    :io.pedestal.http/allowed-origins {:creds true, :allowed-origins #function[clojure.core/constantly/fn--5672]},
+    :io.pedestal.http/resource-path "/public",
+    :io.pedestal.http/interceptors
+    [{:name :io.pedestal.http.impl.servlet-interceptor/exception-debug,
+      :enter nil,
+      :leave nil,
+      :error #function[io.pedestal.http.impl.servlet-interceptor/error-debug]}
+     {:name :reitit.http/router,
+      :enter #function[reitit.http/routing-interceptor/fn--2143],
+      :leave #function[reitit.http/routing-interceptor/fn--2148],
+      :error nil}
+     {:name :dex-api.interceptors.component/system-component-interceptor,
+      :enter #function[dex-api.interceptors.component/component-interceptor/fn--269],
+      :leave #function[dex-api.interceptors.component/component-interceptor/fn--271],
+      :error #function[dex-api.interceptors.component/component-interceptor/fn--273]}],
+    :io.pedestal.http/routes [],
+    :io.pedestal.http/servlet
+    #object[io.pedestal.http.servlet.FnServlet 0x70558c03 "io.pedestal.http.servlet.FnServlet@70558c03"],
+    :io.pedestal.http/server
+    #object[org.eclipse.jetty.server.Server 0x24a6773e "Server@24a6773e{STOPPED}[9.4.48.v20220622]"],
+    :io.pedestal.http/join? false,
+    :io.pedestal.http/stop-fn #function[io.pedestal.http.jetty/server/fn--13148]}},
+  :jetty nil}}
+clj꞉dex-api.server꞉> 
+;; Starting database
+;; Starting service-map
+
+Creating your [DEV] server...
+;; Starting server
+#'dex-api.server/app
+clj꞉dex-api.server꞉> 
+; Evaluating file: schemas.clj
+#'dex-api.configuration.schemas/ring-response
+clj꞉dex-api.configuration.schemas꞉> 
+; Evaluating file: routes.clj
+#'dex-api.routes/routes
+clj꞉dex-api.routes꞉> 
+;; Stopping server
+;; Stopping service-map
+;; Stopping database
+{:database
+ {:settings {:dbtype "postgresql", :host "localhost", :dbname "dex", :username "postgres", :password "postgres"},
+  :connection nil},
+ :service-map
+ {:env :dev,
+  :db
+  {:settings {:dbtype "postgresql", :host "localhost", :dbname "dex", :username "postgres", :password "postgres"},
+   :connection
+   {:connectable #object[com.zaxxer.hikari.HikariDataSource 0x77fa14a3 "HikariDataSource (HikariPool-3)"],
+    :options {:builder-fn #function[next.jdbc.result-set/as-unqualified-lower-maps]}}},
+  :map nil},
+ :server
+ {:service
+  {:env :dev,
+   :db
+   {:settings {:dbtype "postgresql", :host "localhost", :dbname "dex", :username "postgres", :password "postgres"},
+    :connection
+    {:connectable #object[com.zaxxer.hikari.HikariDataSource 0x77fa14a3 "HikariDataSource (HikariPool-3)"],
+     :options {:builder-fn #function[next.jdbc.result-set/as-unqualified-lower-maps]}}},
+   :map
+   {:io.pedestal.http/port 8080,
+    :io.pedestal.http/service-fn #function[io.pedestal.http.impl.servlet-interceptor/interceptor-service-fn/fn--12922],
+    :io.pedestal.http/host "0.0.0.0",
+    :io.pedestal.http/secure-headers
+    {:content-security-policy-settings
+     {:default-src "'self'",
+      :style-src "'self' 'unsafe-inline'",
+      :script-src "'self' 'unsafe-inline'",
+      :img-src "'self' 'unsafe-inline' data: https://validator.swagger.io",
+      :object-src "'none'"}},
+    :io.pedestal.http/type :jetty,
+    :io.pedestal.http/start-fn #function[io.pedestal.http.jetty/server/fn--13146],
+    :env :dev,
+    :io.pedestal.http/allowed-origins {:creds true, :allowed-origins #function[clojure.core/constantly/fn--5672]},
+    :io.pedestal.http/resource-path "/public",
+    :io.pedestal.http/interceptors
+    [{:name :io.pedestal.http.impl.servlet-interceptor/exception-debug,
+      :enter nil,
+      :leave nil,
+      :error #function[io.pedestal.http.impl.servlet-interceptor/error-debug]}
+     {:name :reitit.http/router,
+      :enter #function[reitit.http/routing-interceptor/fn--2143],
+      :leave #function[reitit.http/routing-interceptor/fn--2148],
+      :error nil}
+     {:name :dex-api.interceptors.component/system-component-interceptor,
+      :enter #function[dex-api.interceptors.component/component-interceptor/fn--269],
+      :leave #function[dex-api.interceptors.component/component-interceptor/fn--271],
+      :error #function[dex-api.interceptors.component/component-interceptor/fn--273]}],
+    :io.pedestal.http/routes [],
+    :io.pedestal.http/servlet
+    #object[io.pedestal.http.servlet.FnServlet 0x350a8a9b "io.pedestal.http.servlet.FnServlet@350a8a9b"],
+    :io.pedestal.http/server
+    #object[org.eclipse.jetty.server.Server 0x3ea49fda "Server@3ea49fda{STOPPED}[9.4.48.v20220622]"],
+    :io.pedestal.http/join? false,
+    :io.pedestal.http/stop-fn #function[io.pedestal.http.jetty/server/fn--13148]}},
+  :jetty nil}}
+clj꞉dex-api.server꞉> 
+;; Starting database
+;; Starting service-map
+
+Creating your [DEV] server...
+;; Starting server
+#'dex-api.server/app
+clj꞉dex-api.server꞉> 
+; Evaluating file: schemas.clj
+#'dex-api.configuration.schemas/ring-response
+clj꞉dex-api.configuration.schemas꞉> 
+; Evaluating file: schemas.clj
+#'dex-api.configuration.schemas/ring-response
+clj꞉dex-api.configuration.schemas꞉> 
+;; Stopping server
+;; Stopping service-map
+;; Stopping database
+{:database
+ {:settings {:dbtype "postgresql", :host "localhost", :dbname "dex", :username "postgres", :password "postgres"},
+  :connection nil},
+ :service-map
+ {:env :dev,
+  :db
+  {:settings {:dbtype "postgresql", :host "localhost", :dbname "dex", :username "postgres", :password "postgres"},
+   :connection
+   {:connectable #object[com.zaxxer.hikari.HikariDataSource 0x167a06ff "HikariDataSource (HikariPool-4)"],
+    :options {:builder-fn #function[next.jdbc.result-set/as-unqualified-lower-maps]}}},
+  :map nil},
+ :server
+ {:service
+  {:env :dev,
+   :db
+   {:settings {:dbtype "postgresql", :host "localhost", :dbname "dex", :username "postgres", :password "postgres"},
+    :connection
+    {:connectable #object[com.zaxxer.hikari.HikariDataSource 0x167a06ff "HikariDataSource (HikariPool-4)"],
+     :options {:builder-fn #function[next.jdbc.result-set/as-unqualified-lower-maps]}}},
+   :map
+   {:io.pedestal.http/port 8080,
+    :io.pedestal.http/service-fn #function[io.pedestal.http.impl.servlet-interceptor/interceptor-service-fn/fn--12922],
+    :io.pedestal.http/host "0.0.0.0",
+    :io.pedestal.http/secure-headers
+    {:content-security-policy-settings
+     {:default-src "'self'",
+      :style-src "'self' 'unsafe-inline'",
+      :script-src "'self' 'unsafe-inline'",
+      :img-src "'self' 'unsafe-inline' data: https://validator.swagger.io",
+      :object-src "'none'"}},
+    :io.pedestal.http/type :jetty,
+    :io.pedestal.http/start-fn #function[io.pedestal.http.jetty/server/fn--13146],
+    :env :dev,
+    :io.pedestal.http/allowed-origins {:creds true, :allowed-origins #function[clojure.core/constantly/fn--5672]},
+    :io.pedestal.http/resource-path "/public",
+    :io.pedestal.http/interceptors
+    [{:name :io.pedestal.http.impl.servlet-interceptor/exception-debug,
+      :enter nil,
+      :leave nil,
+      :error #function[io.pedestal.http.impl.servlet-interceptor/error-debug]}
+     {:name :reitit.http/router,
+      :enter #function[reitit.http/routing-interceptor/fn--2143],
+      :leave #function[reitit.http/routing-interceptor/fn--2148],
+      :error nil}
+     {:name :dex-api.interceptors.component/system-component-interceptor,
+      :enter #function[dex-api.interceptors.component/component-interceptor/fn--269],
+      :leave #function[dex-api.interceptors.component/component-interceptor/fn--271],
+      :error #function[dex-api.interceptors.component/component-interceptor/fn--273]}],
+    :io.pedestal.http/routes [],
+    :io.pedestal.http/servlet
+    #object[io.pedestal.http.servlet.FnServlet 0x3804cf1e "io.pedestal.http.servlet.FnServlet@3804cf1e"],
+    :io.pedestal.http/server
+    #object[org.eclipse.jetty.server.Server 0x28e91f50 "Server@28e91f50{STOPPED}[9.4.48.v20220622]"],
+    :io.pedestal.http/join? false,
+    :io.pedestal.http/stop-fn #function[io.pedestal.http.jetty/server/fn--13148]}},
+  :jetty nil}}
+clj꞉dex-api.server꞉> 
+;; Stopping server
+;; Stopping service-map
+;; Stopping database
+{:database
+ {:settings {:dbtype "postgresql", :host "localhost", :dbname "dex", :username "postgres", :password "postgres"},
+  :connection nil},
+ :service-map
+ {:env :dev,
+  :db
+  {:settings {:dbtype "postgresql", :host "localhost", :dbname "dex", :username "postgres", :password "postgres"},
+   :connection
+   {:connectable #object[com.zaxxer.hikari.HikariDataSource 0x167a06ff "HikariDataSource (HikariPool-4)"],
+    :options {:builder-fn #function[next.jdbc.result-set/as-unqualified-lower-maps]}}},
+  :map nil},
+ :server
+ {:service
+  {:env :dev,
+   :db
+   {:settings {:dbtype "postgresql", :host "localhost", :dbname "dex", :username "postgres", :password "postgres"},
+    :connection
+    {:connectable #object[com.zaxxer.hikari.HikariDataSource 0x167a06ff "HikariDataSource (HikariPool-4)"],
+     :options {:builder-fn #function[next.jdbc.result-set/as-unqualified-lower-maps]}}},
+   :map
+   {:io.pedestal.http/port 8080,
+    :io.pedestal.http/service-fn #function[io.pedestal.http.impl.servlet-interceptor/interceptor-service-fn/fn--12922],
+    :io.pedestal.http/host "0.0.0.0",
+    :io.pedestal.http/secure-headers
+    {:content-security-policy-settings
+     {:default-src "'self'",
+      :style-src "'self' 'unsafe-inline'",
+      :script-src "'self' 'unsafe-inline'",
+      :img-src "'self' 'unsafe-inline' data: https://validator.swagger.io",
+      :object-src "'none'"}},
+    :io.pedestal.http/type :jetty,
+    :io.pedestal.http/start-fn #function[io.pedestal.http.jetty/server/fn--13146],
+    :env :dev,
+    :io.pedestal.http/allowed-origins {:creds true, :allowed-origins #function[clojure.core/constantly/fn--5672]},
+    :io.pedestal.http/resource-path "/public",
+    :io.pedestal.http/interceptors
+    [{:name :io.pedestal.http.impl.servlet-interceptor/exception-debug,
+      :enter nil,
+      :leave nil,
+      :error #function[io.pedestal.http.impl.servlet-interceptor/error-debug]}
+     {:name :reitit.http/router,
+      :enter #function[reitit.http/routing-interceptor/fn--2143],
+      :leave #function[reitit.http/routing-interceptor/fn--2148],
+      :error nil}
+     {:name :dex-api.interceptors.component/system-component-interceptor,
+      :enter #function[dex-api.interceptors.component/component-interceptor/fn--269],
+      :leave #function[dex-api.interceptors.component/component-interceptor/fn--271],
+      :error #function[dex-api.interceptors.component/component-interceptor/fn--273]}],
+    :io.pedestal.http/routes [],
+    :io.pedestal.http/servlet
+    #object[io.pedestal.http.servlet.FnServlet 0x3804cf1e "io.pedestal.http.servlet.FnServlet@3804cf1e"],
+    :io.pedestal.http/server
+    #object[org.eclipse.jetty.server.Server 0x28e91f50 "Server@28e91f50{STOPPED}[9.4.48.v20220622]"],
+    :io.pedestal.http/join? false,
+    :io.pedestal.http/stop-fn #function[io.pedestal.http.jetty/server/fn--13148]}},
+  :jetty nil}}
+clj꞉dex-api.server꞉> 
+;; Starting database
+;; Starting service-map
+
+Creating your [DEV] server...
+;; Starting server
+#'dex-api.server/app
+clj꞉dex-api.server꞉> 
+; Evaluating file: schemas.clj
+#'dex-api.configuration.schemas/ring-response
+clj꞉dex-api.configuration.schemas꞉> 
+; Evaluating file: routes.clj
+#'dex-api.routes/routes
+clj꞉dex-api.routes꞉> 
+;; Stopping server
+;; Stopping service-map
+;; Stopping database
+{:database
+ {:settings {:dbtype "postgresql", :host "localhost", :dbname "dex", :username "postgres", :password "postgres"},
+  :connection nil},
+ :service-map
+ {:env :dev,
+  :db
+  {:settings {:dbtype "postgresql", :host "localhost", :dbname "dex", :username "postgres", :password "postgres"},
+   :connection
+   {:connectable #object[com.zaxxer.hikari.HikariDataSource 0x6fca21f0 "HikariDataSource (HikariPool-5)"],
+    :options {:builder-fn #function[next.jdbc.result-set/as-unqualified-lower-maps]}}},
+  :map nil},
+ :server
+ {:service
+  {:env :dev,
+   :db
+   {:settings {:dbtype "postgresql", :host "localhost", :dbname "dex", :username "postgres", :password "postgres"},
+    :connection
+    {:connectable #object[com.zaxxer.hikari.HikariDataSource 0x6fca21f0 "HikariDataSource (HikariPool-5)"],
+     :options {:builder-fn #function[next.jdbc.result-set/as-unqualified-lower-maps]}}},
+   :map
+   {:io.pedestal.http/port 8080,
+    :io.pedestal.http/service-fn #function[io.pedestal.http.impl.servlet-interceptor/interceptor-service-fn/fn--12922],
+    :io.pedestal.http/host "0.0.0.0",
+    :io.pedestal.http/secure-headers
+    {:content-security-policy-settings
+     {:default-src "'self'",
+      :style-src "'self' 'unsafe-inline'",
+      :script-src "'self' 'unsafe-inline'",
+      :img-src "'self' 'unsafe-inline' data: https://validator.swagger.io",
+      :object-src "'none'"}},
+    :io.pedestal.http/type :jetty,
+    :io.pedestal.http/start-fn #function[io.pedestal.http.jetty/server/fn--13146],
+    :env :dev,
+    :io.pedestal.http/allowed-origins {:creds true, :allowed-origins #function[clojure.core/constantly/fn--5672]},
+    :io.pedestal.http/resource-path "/public",
+    :io.pedestal.http/interceptors
+    [{:name :io.pedestal.http.impl.servlet-interceptor/exception-debug,
+      :enter nil,
+      :leave nil,
+      :error #function[io.pedestal.http.impl.servlet-interceptor/error-debug]}
+     {:name :reitit.http/router,
+      :enter #function[reitit.http/routing-interceptor/fn--2143],
+      :leave #function[reitit.http/routing-interceptor/fn--2148],
+      :error nil}
+     {:name :dex-api.interceptors.component/system-component-interceptor,
+      :enter #function[dex-api.interceptors.component/component-interceptor/fn--269],
+      :leave #function[dex-api.interceptors.component/component-interceptor/fn--271],
+      :error #function[dex-api.interceptors.component/component-interceptor/fn--273]}],
+    :io.pedestal.http/routes [],
+    :io.pedestal.http/servlet
+    #object[io.pedestal.http.servlet.FnServlet 0x49df8518 "io.pedestal.http.servlet.FnServlet@49df8518"],
+    :io.pedestal.http/server
+    #object[org.eclipse.jetty.server.Server 0x28549ffa "Server@28549ffa{STOPPED}[9.4.48.v20220622]"],
+    :io.pedestal.http/join? false,
+    :io.pedestal.http/stop-fn #function[io.pedestal.http.jetty/server/fn--13148]}},
+  :jetty nil}}
+clj꞉dex-api.server꞉> 
+;; Starting database
+;; Starting service-map
+
+Creating your [DEV] server...
+;; Starting server
+#'dex-api.server/app
+clj꞉dex-api.server꞉> 
+;; Starting database
+;; Starting service-map
+
+Creating your [DEV] server...
+;; Starting server
+; Execution error (BindException) at sun.nio.ch.Net/bind0 (Net.java:-2).
+; Address already in use
+clj꞉dex-api.server꞉> 
+; Evaluating file: routes.clj
+#'dex-api.routes/routes
+clj꞉dex-api.routes꞉> 
+; Evaluating file: routes.clj
+#'dex-api.routes/routes
+clj꞉dex-api.routes꞉> 
+; Evaluating file: schemas.clj
+#'dex-api.configuration.schemas/ring-response
+clj꞉dex-api.configuration.schemas꞉> 
+;; Stopping server
+;; Stopping service-map
+;; Stopping database
+{:database
+ {:settings {:dbtype "postgresql", :host "localhost", :dbname "dex", :username "postgres", :password "postgres"},
+  :connection nil},
+ :service-map
+ {:env :dev,
+  :db
+  {:settings {:dbtype "postgresql", :host "localhost", :dbname "dex", :username "postgres", :password "postgres"},
+   :connection
+   {:connectable #object[com.zaxxer.hikari.HikariDataSource 0x2b5e0aa0 "HikariDataSource (HikariPool-6)"],
+    :options {:builder-fn #function[next.jdbc.result-set/as-unqualified-lower-maps]}}},
+  :map nil},
+ :server
+ {:service
+  {:env :dev,
+   :db
+   {:settings {:dbtype "postgresql", :host "localhost", :dbname "dex", :username "postgres", :password "postgres"},
+    :connection
+    {:connectable #object[com.zaxxer.hikari.HikariDataSource 0x2b5e0aa0 "HikariDataSource (HikariPool-6)"],
+     :options {:builder-fn #function[next.jdbc.result-set/as-unqualified-lower-maps]}}},
+   :map
+   {:io.pedestal.http/port 8080,
+    :io.pedestal.http/service-fn #function[io.pedestal.http.impl.servlet-interceptor/interceptor-service-fn/fn--12922],
+    :io.pedestal.http/host "0.0.0.0",
+    :io.pedestal.http/secure-headers
+    {:content-security-policy-settings
+     {:default-src "'self'",
+      :style-src "'self' 'unsafe-inline'",
+      :script-src "'self' 'unsafe-inline'",
+      :img-src "'self' 'unsafe-inline' data: https://validator.swagger.io",
+      :object-src "'none'"}},
+    :io.pedestal.http/type :jetty,
+    :io.pedestal.http/start-fn #function[io.pedestal.http.jetty/server/fn--13146],
+    :env :dev,
+    :io.pedestal.http/allowed-origins {:creds true, :allowed-origins #function[clojure.core/constantly/fn--5672]},
+    :io.pedestal.http/resource-path "/public",
+    :io.pedestal.http/interceptors
+    [{:name :io.pedestal.http.impl.servlet-interceptor/exception-debug,
+      :enter nil,
+      :leave nil,
+      :error #function[io.pedestal.http.impl.servlet-interceptor/error-debug]}
+     {:name :reitit.http/router,
+      :enter #function[reitit.http/routing-interceptor/fn--2143],
+      :leave #function[reitit.http/routing-interceptor/fn--2148],
+      :error nil}
+     {:name :dex-api.interceptors.component/system-component-interceptor,
+      :enter #function[dex-api.interceptors.component/component-interceptor/fn--269],
+      :leave #function[dex-api.interceptors.component/component-interceptor/fn--271],
+      :error #function[dex-api.interceptors.component/component-interceptor/fn--273]}],
+    :io.pedestal.http/routes [],
+    :io.pedestal.http/servlet
+    #object[io.pedestal.http.servlet.FnServlet 0x5f7f6e56 "io.pedestal.http.servlet.FnServlet@5f7f6e56"],
+    :io.pedestal.http/server
+    #object[org.eclipse.jetty.server.Server 0x5a8ef025 "Server@5a8ef025{STOPPED}[9.4.48.v20220622]"],
+    :io.pedestal.http/join? false,
+    :io.pedestal.http/stop-fn #function[io.pedestal.http.jetty/server/fn--13148]}},
+  :jetty nil}}
+clj꞉dex-api.server꞉> 
+;; Starting database
+;; Starting service-map
+
+Creating your [DEV] server...
+;; Starting server
+#'dex-api.server/app
+clj꞉dex-api.server꞉> 
+; Evaluating file: adapters.clj
+nil
+clj꞉dex-api.people.adapters꞉> 
+; Syntax error compiling at (src/dex_api/people/adapters.clj:11:3).
+; No such var: clj-time/parse
+clj꞉dex-api.people.adapters꞉> 
+; Evaluating file: adapters.clj
+; Syntax error (IllegalStateException) compiling at (src/dex_api/people/adapters.clj:1:1).
+; Alias clj-time already exists in namespace dex-api.people.adapters, aliasing clj-time.core
+; Evaluation of file adapters.clj failed: class clojure.lang.Compiler$CompilerException
+clj꞉dex-api.people.adapters꞉> 
+; Evaluating file: adapters.clj
+; Syntax error (IllegalStateException) compiling at (src/dex_api/people/adapters.clj:1:1).
+; Alias clj-time already exists in namespace dex-api.people.adapters, aliasing clj-time.core
+; Evaluation of file adapters.clj failed: class clojure.lang.Compiler$CompilerException
+clj꞉dex-api.people.adapters꞉> 
+; Syntax error (ClassNotFoundException) compiling at (src/dex_api/people/adapters.clj:2:3).
+; clj-time.format
+clj꞉dex-api.people.adapters꞉> 
+; Execution error (IllegalStateException) at dex-api.people.adapters/eval9603$loading (form-init14751272796044234073.clj:1).
+; Alias clj-time already exists in namespace dex-api.people.adapters, aliasing clj-time.core
+clj꞉dex-api.people.adapters꞉> 
+; Evaluating file: adapters.clj
+nil
+clj꞉dex-api.people.adapters꞉> 
+; Syntax error (ClassNotFoundException) compiling at (src/dex_api/people/adapters.clj:2:3).
+; clj-time.format
+clj꞉dex-api.people.adapters꞉> 
+; Syntax error (ClassNotFoundException) compiling at (src/dex_api/people/adapters.clj:2:3).
+; clj-time.format
+clj꞉dex-api.people.adapters꞉> 
+nil
+clj꞉dex-api.people.adapters꞉> 
+; Evaluating file: adapters.clj
+nil
+clj꞉dex-api.people.adapters꞉> 
+#object[org.joda.time.DateTime 0x2be46cee "1930-02-01T00:00:00.000Z"]
+clj꞉dex-api.people.adapters꞉> 
+; Evaluating file: adapters.clj
+nil
+clj꞉dex-api.people.adapters꞉> 
+#object[org.joda.time.LocalDate 0x65f39f48 "1930-02-01"]
+clj꞉dex-api.people.adapters꞉> 
+nil
+clj꞉dex-api.people.adapters꞉> 
+#object[org.joda.time.LocalDate 0x2cae3a8e "1930-02-01"]
+clj꞉dex-api.people.adapters꞉> 
+; Evaluating file: adapters.clj
+nil
+clj꞉dex-api.people.adapters꞉> 
+; Evaluating file: adapters.clj
+nil
+clj꞉dex-api.people.adapters꞉> 
+; Evaluating file: controller.clj
+#'dex-api.people.controller/delete
+clj꞉dex-api.people.controller꞉> 
+clj꞉dex-api.people.controller꞉> 
+; nREPL Connection was closed
+; Jacking in...
+; Connecting using "Leiningen" project type.
+; You can make Calva auto-select this:
+; "calva.autoSelectReplConnectProjectType": "Leiningen"
+;   - See https://calva.io/connect/#auto-select-project-type
+; 
+; Starting Jack-in Terminal: lein update-in :dependencies conj '[nrepl,"1.0.0"]' -- update-in :plugins conj '[cider/cider-nrepl,"0.28.5"]' -- update-in '[:repl-options,:nrepl-middleware]' conj '["cider.nrepl/cider-middleware"]' -- with-profile +dev,+uberjar repl :headless
+; Hooking up nREPL sessions...
+; Connected session: clj
+; TIPS:
+;   - You can edit the contents here. Use it as a REPL if you like.
+;   - `alt+enter` evaluates the current top level form.
+;   - `ctrl+enter` evaluates the current form.
+;   - `alt+up` and `alt+down` traverse up and down the REPL command history
+;      when the cursor is after the last contents at the prompt
+;   - Clojure lines in stack traces are peekable and clickable.
+clj꞉dex-api.server꞉> 
+; Jack-in done.
+clj꞉dex-api.server꞉> 
+;; Starting database
+;; Starting service-map
+
+Creating your [DEV] server...
+;; Starting server
+#'dex-api.server/app
+clj꞉dex-api.server꞉> 
+; Evaluating file: http_in.clj
+#'dex-api.people.http-in/delete
+clj꞉dex-api.people.http-in꞉> 
+;; Stopping server
+;; Stopping service-map
+;; Stopping database
+{:database
+ {:settings {:dbtype "postgresql", :host "localhost", :dbname "dex", :username "postgres", :password "postgres"},
+  :connection nil},
+ :service-map
+ {:env :dev,
+  :db
+  {:settings {:dbtype "postgresql", :host "localhost", :dbname "dex", :username "postgres", :password "postgres"},
+   :connection
+   {:connectable #object[com.zaxxer.hikari.HikariDataSource 0x3f51edec "HikariDataSource (HikariPool-1)"],
+    :options {:builder-fn #function[next.jdbc.result-set/as-unqualified-lower-maps]}}},
+  :map nil},
+ :server
+ {:service
+  {:env :dev,
+   :db
+   {:settings {:dbtype "postgresql", :host "localhost", :dbname "dex", :username "postgres", :password "postgres"},
+    :connection
+    {:connectable #object[com.zaxxer.hikari.HikariDataSource 0x3f51edec "HikariDataSource (HikariPool-1)"],
+     :options {:builder-fn #function[next.jdbc.result-set/as-unqualified-lower-maps]}}},
+   :map
+   {:io.pedestal.http/port 8080,
+    :io.pedestal.http/service-fn #function[io.pedestal.http.impl.servlet-interceptor/interceptor-service-fn/fn--12922],
+    :io.pedestal.http/host "0.0.0.0",
+    :io.pedestal.http/secure-headers
+    {:content-security-policy-settings
+     {:default-src "'self'",
+      :style-src "'self' 'unsafe-inline'",
+      :script-src "'self' 'unsafe-inline'",
+      :img-src "'self' 'unsafe-inline' data: https://validator.swagger.io",
+      :object-src "'none'"}},
+    :io.pedestal.http/type :jetty,
+    :io.pedestal.http/start-fn #function[io.pedestal.http.jetty/server/fn--13146],
+    :env :dev,
+    :io.pedestal.http/allowed-origins {:creds true, :allowed-origins #function[clojure.core/constantly/fn--5672]},
+    :io.pedestal.http/resource-path "/public",
+    :io.pedestal.http/interceptors
+    [{:name :io.pedestal.http.impl.servlet-interceptor/exception-debug,
+      :enter nil,
+      :leave nil,
+      :error #function[io.pedestal.http.impl.servlet-interceptor/error-debug]}
+     {:name :reitit.http/router,
+      :enter #function[reitit.http/routing-interceptor/fn--2143],
+      :leave #function[reitit.http/routing-interceptor/fn--2148],
+      :error nil}
+     {:name :dex-api.interceptors.component/system-component-interceptor,
+      :enter #function[dex-api.interceptors.component/component-interceptor/fn--269],
+      :leave #function[dex-api.interceptors.component/component-interceptor/fn--271],
+      :error #function[dex-api.interceptors.component/component-interceptor/fn--273]}],
+    :io.pedestal.http/routes [],
+    :io.pedestal.http/servlet
+    #object[io.pedestal.http.servlet.FnServlet 0x3786e240 "io.pedestal.http.servlet.FnServlet@3786e240"],
+    :io.pedestal.http/server
+    #object[org.eclipse.jetty.server.Server 0x5878faaa "Server@5878faaa{STOPPED}[9.4.48.v20220622]"],
+    :io.pedestal.http/join? false,
+    :io.pedestal.http/stop-fn #function[io.pedestal.http.jetty/server/fn--13148]}},
+  :jetty nil}}
+clj꞉dex-api.server꞉> 
+;; Starting database
+;; Starting service-map
+
+Creating your [DEV] server...
+;; Starting server
+#'dex-api.server/app
+clj꞉dex-api.server꞉> 
+#object[clojure.lang.Var$Unbound 0x34252c27 "Unbound: #'dex-api.people.http-in/components"]
+clj꞉dex-api.people.http-in꞉> 
+; Evaluating file: http_in.clj
+#'dex-api.people.http-in/delete
+clj꞉dex-api.people.http-in꞉> 
+; Evaluating file: routes.clj
+#'dex-api.routes/routes
+clj꞉dex-api.routes꞉> 
+;; Stopping server
+;; Stopping service-map
+;; Stopping database
+{:database
+ {:settings {:dbtype "postgresql", :host "localhost", :dbname "dex", :username "postgres", :password "postgres"},
+  :connection nil},
+ :service-map
+ {:env :dev,
+  :db
+  {:settings {:dbtype "postgresql", :host "localhost", :dbname "dex", :username "postgres", :password "postgres"},
+   :connection
+   {:connectable #object[com.zaxxer.hikari.HikariDataSource 0x5f43686d "HikariDataSource (HikariPool-2)"],
+    :options {:builder-fn #function[next.jdbc.result-set/as-unqualified-lower-maps]}}},
+  :map nil},
+ :server
+ {:service
+  {:env :dev,
+   :db
+   {:settings {:dbtype "postgresql", :host "localhost", :dbname "dex", :username "postgres", :password "postgres"},
+    :connection
+    {:connectable #object[com.zaxxer.hikari.HikariDataSource 0x5f43686d "HikariDataSource (HikariPool-2)"],
+     :options {:builder-fn #function[next.jdbc.result-set/as-unqualified-lower-maps]}}},
+   :map
+   {:io.pedestal.http/port 8080,
+    :io.pedestal.http/service-fn #function[io.pedestal.http.impl.servlet-interceptor/interceptor-service-fn/fn--12922],
+    :io.pedestal.http/host "0.0.0.0",
+    :io.pedestal.http/secure-headers
+    {:content-security-policy-settings
+     {:default-src "'self'",
+      :style-src "'self' 'unsafe-inline'",
+      :script-src "'self' 'unsafe-inline'",
+      :img-src "'self' 'unsafe-inline' data: https://validator.swagger.io",
+      :object-src "'none'"}},
+    :io.pedestal.http/type :jetty,
+    :io.pedestal.http/start-fn #function[io.pedestal.http.jetty/server/fn--13146],
+    :env :dev,
+    :io.pedestal.http/allowed-origins {:creds true, :allowed-origins #function[clojure.core/constantly/fn--5672]},
+    :io.pedestal.http/resource-path "/public",
+    :io.pedestal.http/interceptors
+    [{:name :io.pedestal.http.impl.servlet-interceptor/exception-debug,
+      :enter nil,
+      :leave nil,
+      :error #function[io.pedestal.http.impl.servlet-interceptor/error-debug]}
+     {:name :reitit.http/router,
+      :enter #function[reitit.http/routing-interceptor/fn--2143],
+      :leave #function[reitit.http/routing-interceptor/fn--2148],
+      :error nil}
+     {:name :dex-api.interceptors.component/system-component-interceptor,
+      :enter #function[dex-api.interceptors.component/component-interceptor/fn--269],
+      :leave #function[dex-api.interceptors.component/component-interceptor/fn--271],
+      :error #function[dex-api.interceptors.component/component-interceptor/fn--273]}],
+    :io.pedestal.http/routes [],
+    :io.pedestal.http/servlet
+    #object[io.pedestal.http.servlet.FnServlet 0x3c5d24c4 "io.pedestal.http.servlet.FnServlet@3c5d24c4"],
+    :io.pedestal.http/server
+    #object[org.eclipse.jetty.server.Server 0x59a7912 "Server@59a7912{STOPPED}[9.4.48.v20220622]"],
+    :io.pedestal.http/join? false,
+    :io.pedestal.http/stop-fn #function[io.pedestal.http.jetty/server/fn--13148]}},
+  :jetty nil}}
+clj꞉dex-api.server꞉> 
+;; Starting database
+;; Starting service-map
+
+Creating your [DEV] server...
+;; Starting server
+#'dex-api.server/app
+clj꞉dex-api.server꞉> 
+{:reitit.core/match
+ {:template "/people",
+  :data
+  {:coercion #Coercion{:name :schema},
+   :muuntaja <<Muuntaja>>,
+   :interceptors
+   [{:name :reitit.http.interceptors.parameters/parameters,
+     :compile #function[reitit.http.interceptors.parameters/parameters-interceptor/fn--332],
+     :enter #function[reitit.http.interceptors.parameters/parameters-interceptor/fn--336]}
+    {:name :reitit.http.interceptors.muuntaja/format-negotiate,
+     :spec :reitit.http.interceptors.muuntaja/spec,
+     :compile #function[reitit.http.interceptors.muuntaja/format-negotiate-interceptor/fn--307]}
+    {:name :reitit.http.interceptors.muuntaja/format-response,
+     :spec :reitit.http.interceptors.muuntaja/spec,
+     :compile #function[reitit.http.interceptors.muuntaja/format-response-interceptor/fn--321]}
+    {:name :reitit.http.interceptors.exception/exception,
+     :spec :reitit.http.interceptors.exception/spec,
+     :error #function[reitit.http.interceptors.exception/exception-interceptor/fn--253]}
+    {:name :reitit.http.interceptors.muuntaja/format-request,
+     :spec :reitit.http.interceptors.muuntaja/spec,
+     :compile #function[reitit.http.interceptors.muuntaja/format-request-interceptor/fn--314]}
+    {:name :reitit.http.coercion/coerce-response,
+     :spec :reitit.spec/responses,
+     :compile #function[reitit.http.coercion/coerce-response-interceptor/fn--345]}
+    {:name :reitit.http.coercion/coerce-request,
+     :spec :reitit.spec/parameters,
+     :compile #function[reitit.http.coercion/coerce-request-interceptor/fn--337]}],
+   :get
+   {:summary "Displays all people registered.",
+    :handler #function[dex-api.people.http-in/eval9557/index--9562],
+    :responses
+    {200 {:body [{:name java.lang.String, :email java.lang.String, :birthdate java.time.LocalDate, :id Int}]}}},
+   :post {:summary "Registers a new person.", :handler #function[dex-api.people.http-in/eval9581/save--9586]}},
+  :result
+  {:get
+   {:data
+    {:coercion #Coercion{:name :schema},
+     :muuntaja <<Muuntaja>>,
+     :interceptors
+     [{:name :reitit.http.interceptors.parameters/parameters,
+       :compile #function[reitit.http.interceptors.parameters/parameters-interceptor/fn--332],
+       :enter #function[reitit.http.interceptors.parameters/parameters-interceptor/fn--336]}
+      {:name :reitit.http.interceptors.muuntaja/format-negotiate,
+       :spec :reitit.http.interceptors.muuntaja/spec,
+       :compile #function[reitit.http.interceptors.muuntaja/format-negotiate-interceptor/fn--307]}
+      {:name :reitit.http.interceptors.muuntaja/format-response,
+       :spec :reitit.http.interceptors.muuntaja/spec,
+       :compile #function[reitit.http.interceptors.muuntaja/format-response-interceptor/fn--321]}
+      {:name :reitit.http.interceptors.exception/exception,
+       :spec :reitit.http.interceptors.exception/spec,
+       :error #function[reitit.http.interceptors.exception/exception-interceptor/fn--253]}
+      {:name :reitit.http.interceptors.muuntaja/format-request,
+       :spec :reitit.http.interceptors.muuntaja/spec,
+       :compile #function[reitit.http.interceptors.muuntaja/format-request-interceptor/fn--314]}
+      {:name :reitit.http.coercion/coerce-response,
+       :spec :reitit.spec/responses,
+       :compile #function[reitit.http.coercion/coerce-response-interceptor/fn--345]}
+      {:name :reitit.http.coercion/coerce-request,
+       :spec :reitit.spec/parameters,
+       :compile #function[reitit.http.coercion/coerce-request-interceptor/fn--337]}],
+     :summary "Displays all people registered.",
+     :handler #function[dex-api.people.http-in/eval9557/index--9562],
+     :responses
+     {200 {:body [{:name java.lang.String, :email java.lang.String, :birthdate java.time.LocalDate, :id Int}]}}},
+    :interceptors
+    [{:name :reitit.http.interceptors.parameters/parameters,
+      :enter #function[reitit.http.interceptors.parameters/parameters-interceptor/fn--336],
+      :leave nil,
+      :error nil}
+     {:name :reitit.http.interceptors.muuntaja/format-negotiate,
+      :enter #function[muuntaja.interceptor/format-negotiate-interceptor/fn--277],
+      :leave nil,
+      :error nil,
+      :spec :reitit.http.interceptors.muuntaja/spec}
+     {:name :reitit.http.interceptors.muuntaja/format-response,
+      :enter nil,
+      :leave #function[muuntaja.interceptor/format-response-interceptor/fn--283],
+      :error nil,
+      :spec :reitit.http.interceptors.muuntaja/spec,
+      :data
+      {:swagger
+       {:produces #{"application/json" "application/transit+msgpack" "application/transit+json" "application/edn"}}}}
+     {:name :reitit.http.interceptors.exception/exception,
+      :enter nil,
+      :leave nil,
+      :error #function[reitit.http.interceptors.exception/exception-interceptor/fn--253],
+      :spec :reitit.http.interceptors.exception/spec}
+     {:name :reitit.http.interceptors.muuntaja/format-request,
+      :enter #function[muuntaja.interceptor/format-request-interceptor/fn--280],
+      :leave nil,
+      :error nil,
+      :spec :reitit.http.interceptors.muuntaja/spec,
+      :data
+      {:swagger
+       {:consumes #{"application/json" "application/transit+msgpack" "application/transit+json" "application/edn"}}}}
+     {:name :reitit.http.coercion/coerce-response,
+      :enter nil,
+      :leave #function[reitit.http.coercion/coerce-response-interceptor/fn--345/fn--347],
+      :error nil,
+      :spec :reitit.spec/responses}
+     {:name :reitit.http.coercion/coerce-request, :enter nil, :leave nil, :error nil, :spec :reitit.spec/parameters}
+     {:name :reitit.interceptor/handler,
+      :enter #function[reitit.interceptor/fn--1639/fn--1640],
+      :leave nil,
+      :error nil,
+      :reitit.interceptor/handler #function[dex-api.people.http-in/eval9557/index--9562]}],
+    :queue
+    [{:name :reitit.http.interceptors.parameters/parameters,
+      :enter #function[reitit.http.interceptors.parameters/parameters-interceptor/fn--336],
+      :leave nil,
+      :error nil}
+     {:name :reitit.http.interceptors.muuntaja/format-negotiate,
+      :enter #function[muuntaja.interceptor/format-negotiate-interceptor/fn--277],
+      :leave nil,
+      :error nil,
+      :spec :reitit.http.interceptors.muuntaja/spec}
+     {:name :reitit.http.interceptors.muuntaja/format-response,
+      :enter nil,
+      :leave #function[muuntaja.interceptor/format-response-interceptor/fn--283],
+      :error nil,
+      :spec :reitit.http.interceptors.muuntaja/spec,
+      :data
+      {:swagger
+       {:produces #{"application/json" "application/transit+msgpack" "application/transit+json" "application/edn"}}}}
+     {:name :reitit.http.interceptors.exception/exception,
+      :enter nil,
+      :leave nil,
+      :error #function[reitit.http.interceptors.exception/exception-interceptor/fn--253],
+      :spec :reitit.http.interceptors.exception/spec}
+     {:name :reitit.http.interceptors.muuntaja/format-request,
+      :enter #function[muuntaja.interceptor/format-request-interceptor/fn--280],
+      :leave nil,
+      :error nil,
+      :spec :reitit.http.interceptors.muuntaja/spec,
+      :data
+      {:swagger
+       {:consumes #{"application/json" "application/transit+msgpack" "application/transit+json" "application/edn"}}}}
+     {:name :reitit.http.coercion/coerce-response,
+      :enter nil,
+      :leave #function[reitit.http.coercion/coerce-response-interceptor/fn--345/fn--347],
+      :error nil,
+      :spec :reitit.spec/responses}
+     {:name :reitit.http.coercion/coerce-request, :enter nil, :leave nil, :error nil, :spec :reitit.spec/parameters}
+     {:name :reitit.interceptor/handler,
+      :enter #function[reitit.interceptor/fn--1639/fn--1640],
+      :leave nil,
+      :error nil,
+      :reitit.interceptor/handler #function[dex-api.people.http-in/eval9557/index--9562]}],
+    :handler nil,
+    :path "/people",
+    :method :get},
+   :head nil,
+   :post
+   {:data
+    {:coercion #Coercion{:name :schema},
+     :muuntaja <<Muuntaja>>,
+     :interceptors
+     [{:name :reitit.http.interceptors.parameters/parameters,
+       :compile #function[reitit.http.interceptors.parameters/parameters-interceptor/fn--332],
+       :enter #function[reitit.http.interceptors.parameters/parameters-interceptor/fn--336]}
+      {:name :reitit.http.interceptors.muuntaja/format-negotiate,
+       :spec :reitit.http.interceptors.muuntaja/spec,
+       :compile #function[reitit.http.interceptors.muuntaja/format-negotiate-interceptor/fn--307]}
+      {:name :reitit.http.interceptors.muuntaja/format-response,
+       :spec :reitit.http.interceptors.muuntaja/spec,
+       :compile #function[reitit.http.interceptors.muuntaja/format-response-interceptor/fn--321]}
+      {:name :reitit.http.interceptors.exception/exception,
+       :spec :reitit.http.interceptors.exception/spec,
+       :error #function[reitit.http.interceptors.exception/exception-interceptor/fn--253]}
+      {:name :reitit.http.interceptors.muuntaja/format-request,
+       :spec :reitit.http.interceptors.muuntaja/spec,
+       :compile #function[reitit.http.interceptors.muuntaja/format-request-interceptor/fn--314]}
+      {:name :reitit.http.coercion/coerce-response,
+       :spec :reitit.spec/responses,
+       :compile #function[reitit.http.coercion/coerce-response-interceptor/fn--345]}
+      {:name :reitit.http.coercion/coerce-request,
+       :spec :reitit.spec/parameters,
+       :compile #function[reitit.http.coercion/coerce-request-interceptor/fn--337]}],
+     :summary "Registers a new person.",
+     :handler #function[dex-api.people.http-in/eval9581/save--9586]},
+    :interceptors
+    [{:name :reitit.http.interceptors.parameters/parameters,
+      :enter #function[reitit.http.interceptors.parameters/parameters-interceptor/fn--336],
+      :leave nil,
+      :error nil}
+     {:name :reitit.http.interceptors.muuntaja/format-negotiate,
+      :enter #function[muuntaja.interceptor/format-negotiate-interceptor/fn--277],
+      :leave nil,
+      :error nil,
+      :spec :reitit.http.interceptors.muuntaja/spec}
+     {:name :reitit.http.interceptors.muuntaja/format-response,
+      :enter nil,
+      :leave #function[muuntaja.interceptor/format-response-interceptor/fn--283],
+      :error nil,
+      :spec :reitit.http.interceptors.muuntaja/spec,
+      :data
+      {:swagger
+       {:produces #{"application/json" "application/transit+msgpack" "application/transit+json" "application/edn"}}}}
+     {:name :reitit.http.interceptors.exception/exception,
+      :enter nil,
+      :leave nil,
+      :error #function[reitit.http.interceptors.exception/exception-interceptor/fn--253],
+      :spec :reitit.http.interceptors.exception/spec}
+     {:name :reitit.http.interceptors.muuntaja/format-request,
+      :enter #function[muuntaja.interceptor/format-request-interceptor/fn--280],
+      :leave nil,
+      :error nil,
+      :spec :reitit.http.interceptors.muuntaja/spec,
+      :data
+      {:swagger
+       {:consumes #{"application/json" "application/transit+msgpack" "application/transit+json" "application/edn"}}}}
+     {:name :reitit.http.coercion/coerce-response, :enter nil, :leave nil, :error nil, :spec :reitit.spec/responses}
+     {:name :reitit.http.coercion/coerce-request, :enter nil, :leave nil, :error nil, :spec :reitit.spec/parameters}
+     {:name :reitit.interceptor/handler,
+      :enter #function[reitit.interceptor/fn--1639/fn--1640],
+      :leave nil,
+      :error nil,
+      :reitit.interceptor/handler #function[dex-api.people.http-in/eval9581/save--9586]}],
+    :queue
+    [{:name :reitit.http.interceptors.parameters/parameters,
+      :enter #function[reitit.http.interceptors.parameters/parameters-interceptor/fn--336],
+      :leave nil,
+      :error nil}
+     {:name :reitit.http.interceptors.muuntaja/format-negotiate,
+      :enter #function[muuntaja.interceptor/format-negotiate-interceptor/fn--277],
+      :leave nil,
+      :error nil,
+      :spec :reitit.http.interceptors.muuntaja/spec}
+     {:name :reitit.http.interceptors.muuntaja/format-response,
+      :enter nil,
+      :leave #function[muuntaja.interceptor/format-response-interceptor/fn--283],
+      :error nil,
+      :spec :reitit.http.interceptors.muuntaja/spec,
+      :data
+      {:swagger
+       {:produces #{"application/json" "application/transit+msgpack" "application/transit+json" "application/edn"}}}}
+     {:name :reitit.http.interceptors.exception/exception,
+      :enter nil,
+      :leave nil,
+      :error #function[reitit.http.interceptors.exception/exception-interceptor/fn--253],
+      :spec :reitit.http.interceptors.exception/spec}
+     {:name :reitit.http.interceptors.muuntaja/format-request,
+      :enter #function[muuntaja.interceptor/format-request-interceptor/fn--280],
+      :leave nil,
+      :error nil,
+      :spec :reitit.http.interceptors.muuntaja/spec,
+      :data
+      {:swagger
+       {:consumes #{"application/json" "application/transit+msgpack" "application/transit+json" "application/edn"}}}}
+     {:name :reitit.http.coercion/coerce-response, :enter nil, :leave nil, :error nil, :spec :reitit.spec/responses}
+     {:name :reitit.http.coercion/coerce-request, :enter nil, :leave nil, :error nil, :spec :reitit.spec/parameters}
+     {:name :reitit.interceptor/handler,
+      :enter #function[reitit.interceptor/fn--1639/fn--1640],
+      :leave nil,
+      :error nil,
+      :reitit.interceptor/handler #function[dex-api.people.http-in/eval9581/save--9586]}],
+    :handler nil,
+    :path "/people",
+    :method :post},
+   :put nil,
+   :delete nil,
+   :connect nil,
+   :options
+   {:data
+    {:coercion #Coercion{:name :schema},
+     :muuntaja <<Muuntaja>>,
+     :interceptors
+     [{:name :reitit.http.interceptors.parameters/parameters,
+       :compile #function[reitit.http.interceptors.parameters/parameters-interceptor/fn--332],
+       :enter #function[reitit.http.interceptors.parameters/parameters-interceptor/fn--336]}
+      {:name :reitit.http.interceptors.muuntaja/format-negotiate,
+       :spec :reitit.http.interceptors.muuntaja/spec,
+       :compile #function[reitit.http.interceptors.muuntaja/format-negotiate-interceptor/fn--307]}
+      {:name :reitit.http.interceptors.muuntaja/format-response,
+       :spec :reitit.http.interceptors.muuntaja/spec,
+       :compile #function[reitit.http.interceptors.muuntaja/format-response-interceptor/fn--321]}
+      {:name :reitit.http.interceptors.exception/exception,
+       :spec :reitit.http.interceptors.exception/spec,
+       :error #function[reitit.http.interceptors.exception/exception-interceptor/fn--253]}
+      {:name :reitit.http.interceptors.muuntaja/format-request,
+       :spec :reitit.http.interceptors.muuntaja/spec,
+       :compile #function[reitit.http.interceptors.muuntaja/format-request-interceptor/fn--314]}
+      {:name :reitit.http.coercion/coerce-response,
+       :spec :reitit.spec/responses,
+       :compile #function[reitit.http.coercion/coerce-response-interceptor/fn--345]}
+      {:name :reitit.http.coercion/coerce-request,
+       :spec :reitit.spec/parameters,
+       :compile #function[reitit.http.coercion/coerce-request-interceptor/fn--337]}],
+     :no-doc true,
+     :handler #function[reitit.ring/fn--1953/fn--1962]},
+    :interceptors
+    [{:name :reitit.http.interceptors.parameters/parameters,
+      :enter #function[reitit.http.interceptors.parameters/parameters-interceptor/fn--336],
+      :leave nil,
+      :error nil}
+     {:name :reitit.http.interceptors.muuntaja/format-negotiate,
+      :enter #function[muuntaja.interceptor/format-negotiate-interceptor/fn--277],
+      :leave nil,
+      :error nil,
+      :spec :reitit.http.interceptors.muuntaja/spec}
+     {:name :reitit.http.interceptors.muuntaja/format-response,
+      :enter nil,
+      :leave #function[muuntaja.interceptor/format-response-interceptor/fn--283],
+      :error nil,
+      :spec :reitit.http.interceptors.muuntaja/spec,
+      :data
+      {:swagger
+       {:produces #{"application/json" "application/transit+msgpack" "application/transit+json" "application/edn"}}}}
+     {:name :reitit.http.interceptors.exception/exception,
+      :enter nil,
+      :leave nil,
+      :error #function[reitit.http.interceptors.exception/exception-interceptor/fn--253],
+      :spec :reitit.http.interceptors.exception/spec}
+     {:name :reitit.http.interceptors.muuntaja/format-request,
+      :enter #function[muuntaja.interceptor/format-request-interceptor/fn--280],
+      :leave nil,
+      :error nil,
+      :spec :reitit.http.interceptors.muuntaja/spec,
+      :data
+      {:swagger
+       {:consumes #{"application/json" "application/transit+msgpack" "application/transit+json" "application/edn"}}}}
+     {:name :reitit.http.coercion/coerce-response, :enter nil, :leave nil, :error nil, :spec :reitit.spec/responses}
+     {:name :reitit.http.coercion/coerce-request, :enter nil, :leave nil, :error nil, :spec :reitit.spec/parameters}
+     {:name :reitit.interceptor/handler,
+      :enter #function[reitit.interceptor/fn--1639/fn--1640],
+      :leave nil,
+      :error nil,
+      :reitit.interceptor/handler #function[reitit.ring/fn--1953/fn--1962]}],
+    :queue
+    [{:name :reitit.http.interceptors.parameters/parameters,
+      :enter #function[reitit.http.interceptors.parameters/parameters-interceptor/fn--336],
+      :leave nil,
+      :error nil}
+     {:name :reitit.http.interceptors.muuntaja/format-negotiate,
+      :enter #function[muuntaja.interceptor/format-negotiate-interceptor/fn--277],
+      :leave nil,
+      :error nil,
+      :spec :reitit.http.interceptors.muuntaja/spec}
+     {:name :reitit.http.interceptors.muuntaja/format-response,
+      :enter nil,
+      :leave #function[muuntaja.interceptor/format-response-interceptor/fn--283],
+      :error nil,
+      :spec :reitit.http.interceptors.muuntaja/spec,
+      :data
+      {:swagger
+       {:produces #{"application/json" "application/transit+msgpack" "application/transit+json" "application/edn"}}}}
+     {:name :reitit.http.interceptors.exception/exception,
+      :enter nil,
+      :leave nil,
+      :error #function[reitit.http.interceptors.exception/exception-interceptor/fn--253],
+      :spec :reitit.http.interceptors.exception/spec}
+     {:name :reitit.http.interceptors.muuntaja/format-request,
+      :enter #function[muuntaja.interceptor/format-request-interceptor/fn--280],
+      :leave nil,
+      :error nil,
+      :spec :reitit.http.interceptors.muuntaja/spec,
+      :data
+      {:swagger
+       {:consumes #{"application/json" "application/transit+msgpack" "application/transit+json" "application/edn"}}}}
+     {:name :reitit.http.coercion/coerce-response, :enter nil, :leave nil, :error nil, :spec :reitit.spec/responses}
+     {:name :reitit.http.coercion/coerce-request, :enter nil, :leave nil, :error nil, :spec :reitit.spec/parameters}
+     {:name :reitit.interceptor/handler,
+      :enter #function[reitit.interceptor/fn--1639/fn--1640],
+      :leave nil,
+      :error nil,
+      :reitit.interceptor/handler #function[reitit.ring/fn--1953/fn--1962]}],
+    :handler nil,
+    :path "/people",
+    :method :options},
+   :trace nil,
+   :patch nil},
+  :path-params {},
+  :path "/people"},
+ :reitit.core/router
+ #object[reitit.core$mixed_router$reify__1388 0x79c32b15 "reitit.core$mixed_router$reify__1388@79c32b15"],
+ :protocol "HTTP/1.1",
+ :async-supported? true,
+ :remote-addr "[0:0:0:0:0:0:0:1]",
+ :params {},
+ :servlet-response #object[org.eclipse.jetty.server.Response 0x1dd01ed "null 200 \n\r\n"],
+ :body-params {:birthdate "20/02/1965", :email "selma.bouvier@yahoo.com", :name "Selma Bouvier"},
+ :servlet #object[io.pedestal.http.servlet.FnServlet 0x2e1d0e40 "io.pedestal.http.servlet.FnServlet@2e1d0e40"],
+ :headers
+ {"accept" "*/*",
+  "user-agent" "insomnia/2022.7.5",
+  "host" "localhost:8080",
+  "content-length" "93",
+  "content-type" "application/json"},
+ :server-port 8080,
+ :servlet-request #object[org.eclipse.jetty.server.Request 0x7eba9d67 "Request(null null)@7eba9d67"],
+ :muuntaja/request {:format "application/json", :charset "utf-8", :raw-format "application/json"},
+ :components
+ {:database
+  {:settings {:dbtype "postgresql", :host "localhost", :dbname "dex", :username "postgres", :password "postgres"},
+   :connection
+   {:connectable #object[com.zaxxer.hikari.HikariDataSource 0x7629e0b4 "HikariDataSource (null)"],
+    :options {:builder-fn #function[next.jdbc.result-set/as-unqualified-lower-maps]}}}},
+ :content-length 93,
+ :form-params {},
+ :query-params {},
+ :content-type "application/json",
+ :path-info "/people",
+ :character-encoding "UTF-8",
+ :uri "/people",
+ :server-name "localhost",
+ :query-string nil,
+ :path-params {},
+ :muuntaja/response {:format "application/json", :charset "utf-8", :raw-format "*/*"},
+ :body
+ #object[org.eclipse.jetty.server.HttpInputOverHTTP 0x1ee72e80 "HttpInputOverHTTP@1ee72e80[c=93,q=0,[0]=null,s=EOF]"],
+ :scheme :http,
+ :request-method :get,
+ :context-path ""}
+clj꞉dex-api.people.http-in꞉> 
+; Evaluating file: http_in.clj
+#'dex-api.people.http-in/delete
+clj꞉dex-api.people.http-in꞉> 
+; Evaluating file: http_in.clj
+#'dex-api.people.http-in/delete
+clj꞉dex-api.people.http-in꞉> 
+nil
+clj꞉dex-api.people.http-in꞉> 
+{:reitit.core/match
+ {:template "/people",
+  :data
+  {:coercion #Coercion{:name :schema},
+   :muuntaja <<Muuntaja>>,
+   :interceptors
+   [{:name :reitit.http.interceptors.parameters/parameters,
+     :compile #function[reitit.http.interceptors.parameters/parameters-interceptor/fn--332],
+     :enter #function[reitit.http.interceptors.parameters/parameters-interceptor/fn--336]}
+    {:name :reitit.http.interceptors.muuntaja/format-negotiate,
+     :spec :reitit.http.interceptors.muuntaja/spec,
+     :compile #function[reitit.http.interceptors.muuntaja/format-negotiate-interceptor/fn--307]}
+    {:name :reitit.http.interceptors.muuntaja/format-response,
+     :spec :reitit.http.interceptors.muuntaja/spec,
+     :compile #function[reitit.http.interceptors.muuntaja/format-response-interceptor/fn--321]}
+    {:name :reitit.http.interceptors.exception/exception,
+     :spec :reitit.http.interceptors.exception/spec,
+     :error #function[reitit.http.interceptors.exception/exception-interceptor/fn--253]}
+    {:name :reitit.http.interceptors.muuntaja/format-request,
+     :spec :reitit.http.interceptors.muuntaja/spec,
+     :compile #function[reitit.http.interceptors.muuntaja/format-request-interceptor/fn--314]}
+    {:name :reitit.http.coercion/coerce-response,
+     :spec :reitit.spec/responses,
+     :compile #function[reitit.http.coercion/coerce-response-interceptor/fn--345]}
+    {:name :reitit.http.coercion/coerce-request,
+     :spec :reitit.spec/parameters,
+     :compile #function[reitit.http.coercion/coerce-request-interceptor/fn--337]}],
+   :get
+   {:summary "Displays all people registered.",
+    :handler #function[dex-api.people.http-in/eval9557/index--9562],
+    :responses
+    {200 {:body [{:name java.lang.String, :email java.lang.String, :birthdate java.time.LocalDate, :id Int}]}}},
+   :post {:summary "Registers a new person.", :handler #function[dex-api.people.http-in/eval9581/save--9586]}},
+  :result
+  {:get
+   {:data
+    {:coercion #Coercion{:name :schema},
+     :muuntaja <<Muuntaja>>,
+     :interceptors
+     [{:name :reitit.http.interceptors.parameters/parameters,
+       :compile #function[reitit.http.interceptors.parameters/parameters-interceptor/fn--332],
+       :enter #function[reitit.http.interceptors.parameters/parameters-interceptor/fn--336]}
+      {:name :reitit.http.interceptors.muuntaja/format-negotiate,
+       :spec :reitit.http.interceptors.muuntaja/spec,
+       :compile #function[reitit.http.interceptors.muuntaja/format-negotiate-interceptor/fn--307]}
+      {:name :reitit.http.interceptors.muuntaja/format-response,
+       :spec :reitit.http.interceptors.muuntaja/spec,
+       :compile #function[reitit.http.interceptors.muuntaja/format-response-interceptor/fn--321]}
+      {:name :reitit.http.interceptors.exception/exception,
+       :spec :reitit.http.interceptors.exception/spec,
+       :error #function[reitit.http.interceptors.exception/exception-interceptor/fn--253]}
+      {:name :reitit.http.interceptors.muuntaja/format-request,
+       :spec :reitit.http.interceptors.muuntaja/spec,
+       :compile #function[reitit.http.interceptors.muuntaja/format-request-interceptor/fn--314]}
+      {:name :reitit.http.coercion/coerce-response,
+       :spec :reitit.spec/responses,
+       :compile #function[reitit.http.coercion/coerce-response-interceptor/fn--345]}
+      {:name :reitit.http.coercion/coerce-request,
+       :spec :reitit.spec/parameters,
+       :compile #function[reitit.http.coercion/coerce-request-interceptor/fn--337]}],
+     :summary "Displays all people registered.",
+     :handler #function[dex-api.people.http-in/eval9557/index--9562],
+     :responses
+     {200 {:body [{:name java.lang.String, :email java.lang.String, :birthdate java.time.LocalDate, :id Int}]}}},
+    :interceptors
+    [{:name :reitit.http.interceptors.parameters/parameters,
+      :enter #function[reitit.http.interceptors.parameters/parameters-interceptor/fn--336],
+      :leave nil,
+      :error nil}
+     {:name :reitit.http.interceptors.muuntaja/format-negotiate,
+      :enter #function[muuntaja.interceptor/format-negotiate-interceptor/fn--277],
+      :leave nil,
+      :error nil,
+      :spec :reitit.http.interceptors.muuntaja/spec}
+     {:name :reitit.http.interceptors.muuntaja/format-response,
+      :enter nil,
+      :leave #function[muuntaja.interceptor/format-response-interceptor/fn--283],
+      :error nil,
+      :spec :reitit.http.interceptors.muuntaja/spec,
+      :data
+      {:swagger
+       {:produces #{"application/json" "application/transit+msgpack" "application/transit+json" "application/edn"}}}}
+     {:name :reitit.http.interceptors.exception/exception,
+      :enter nil,
+      :leave nil,
+      :error #function[reitit.http.interceptors.exception/exception-interceptor/fn--253],
+      :spec :reitit.http.interceptors.exception/spec}
+     {:name :reitit.http.interceptors.muuntaja/format-request,
+      :enter #function[muuntaja.interceptor/format-request-interceptor/fn--280],
+      :leave nil,
+      :error nil,
+      :spec :reitit.http.interceptors.muuntaja/spec,
+      :data
+      {:swagger
+       {:consumes #{"application/json" "application/transit+msgpack" "application/transit+json" "application/edn"}}}}
+     {:name :reitit.http.coercion/coerce-response,
+      :enter nil,
+      :leave #function[reitit.http.coercion/coerce-response-interceptor/fn--345/fn--347],
+      :error nil,
+      :spec :reitit.spec/responses}
+     {:name :reitit.http.coercion/coerce-request, :enter nil, :leave nil, :error nil, :spec :reitit.spec/parameters}
+     {:name :reitit.interceptor/handler,
+      :enter #function[reitit.interceptor/fn--1639/fn--1640],
+      :leave nil,
+      :error nil,
+      :reitit.interceptor/handler #function[dex-api.people.http-in/eval9557/index--9562]}],
+    :queue
+    [{:name :reitit.http.interceptors.parameters/parameters,
+      :enter #function[reitit.http.interceptors.parameters/parameters-interceptor/fn--336],
+      :leave nil,
+      :error nil}
+     {:name :reitit.http.interceptors.muuntaja/format-negotiate,
+      :enter #function[muuntaja.interceptor/format-negotiate-interceptor/fn--277],
+      :leave nil,
+      :error nil,
+      :spec :reitit.http.interceptors.muuntaja/spec}
+     {:name :reitit.http.interceptors.muuntaja/format-response,
+      :enter nil,
+      :leave #function[muuntaja.interceptor/format-response-interceptor/fn--283],
+      :error nil,
+      :spec :reitit.http.interceptors.muuntaja/spec,
+      :data
+      {:swagger
+       {:produces #{"application/json" "application/transit+msgpack" "application/transit+json" "application/edn"}}}}
+     {:name :reitit.http.interceptors.exception/exception,
+      :enter nil,
+      :leave nil,
+      :error #function[reitit.http.interceptors.exception/exception-interceptor/fn--253],
+      :spec :reitit.http.interceptors.exception/spec}
+     {:name :reitit.http.interceptors.muuntaja/format-request,
+      :enter #function[muuntaja.interceptor/format-request-interceptor/fn--280],
+      :leave nil,
+      :error nil,
+      :spec :reitit.http.interceptors.muuntaja/spec,
+      :data
+      {:swagger
+       {:consumes #{"application/json" "application/transit+msgpack" "application/transit+json" "application/edn"}}}}
+     {:name :reitit.http.coercion/coerce-response,
+      :enter nil,
+      :leave #function[reitit.http.coercion/coerce-response-interceptor/fn--345/fn--347],
+      :error nil,
+      :spec :reitit.spec/responses}
+     {:name :reitit.http.coercion/coerce-request, :enter nil, :leave nil, :error nil, :spec :reitit.spec/parameters}
+     {:name :reitit.interceptor/handler,
+      :enter #function[reitit.interceptor/fn--1639/fn--1640],
+      :leave nil,
+      :error nil,
+      :reitit.interceptor/handler #function[dex-api.people.http-in/eval9557/index--9562]}],
+    :handler nil,
+    :path "/people",
+    :method :get},
+   :head nil,
+   :post
+   {:data
+    {:coercion #Coercion{:name :schema},
+     :muuntaja <<Muuntaja>>,
+     :interceptors
+     [{:name :reitit.http.interceptors.parameters/parameters,
+       :compile #function[reitit.http.interceptors.parameters/parameters-interceptor/fn--332],
+       :enter #function[reitit.http.interceptors.parameters/parameters-interceptor/fn--336]}
+      {:name :reitit.http.interceptors.muuntaja/format-negotiate,
+       :spec :reitit.http.interceptors.muuntaja/spec,
+       :compile #function[reitit.http.interceptors.muuntaja/format-negotiate-interceptor/fn--307]}
+      {:name :reitit.http.interceptors.muuntaja/format-response,
+       :spec :reitit.http.interceptors.muuntaja/spec,
+       :compile #function[reitit.http.interceptors.muuntaja/format-response-interceptor/fn--321]}
+      {:name :reitit.http.interceptors.exception/exception,
+       :spec :reitit.http.interceptors.exception/spec,
+       :error #function[reitit.http.interceptors.exception/exception-interceptor/fn--253]}
+      {:name :reitit.http.interceptors.muuntaja/format-request,
+       :spec :reitit.http.interceptors.muuntaja/spec,
+       :compile #function[reitit.http.interceptors.muuntaja/format-request-interceptor/fn--314]}
+      {:name :reitit.http.coercion/coerce-response,
+       :spec :reitit.spec/responses,
+       :compile #function[reitit.http.coercion/coerce-response-interceptor/fn--345]}
+      {:name :reitit.http.coercion/coerce-request,
+       :spec :reitit.spec/parameters,
+       :compile #function[reitit.http.coercion/coerce-request-interceptor/fn--337]}],
+     :summary "Registers a new person.",
+     :handler #function[dex-api.people.http-in/eval9581/save--9586]},
+    :interceptors
+    [{:name :reitit.http.interceptors.parameters/parameters,
+      :enter #function[reitit.http.interceptors.parameters/parameters-interceptor/fn--336],
+      :leave nil,
+      :error nil}
+     {:name :reitit.http.interceptors.muuntaja/format-negotiate,
+      :enter #function[muuntaja.interceptor/format-negotiate-interceptor/fn--277],
+      :leave nil,
+      :error nil,
+      :spec :reitit.http.interceptors.muuntaja/spec}
+     {:name :reitit.http.interceptors.muuntaja/format-response,
+      :enter nil,
+      :leave #function[muuntaja.interceptor/format-response-interceptor/fn--283],
+      :error nil,
+      :spec :reitit.http.interceptors.muuntaja/spec,
+      :data
+      {:swagger
+       {:produces #{"application/json" "application/transit+msgpack" "application/transit+json" "application/edn"}}}}
+     {:name :reitit.http.interceptors.exception/exception,
+      :enter nil,
+      :leave nil,
+      :error #function[reitit.http.interceptors.exception/exception-interceptor/fn--253],
+      :spec :reitit.http.interceptors.exception/spec}
+     {:name :reitit.http.interceptors.muuntaja/format-request,
+      :enter #function[muuntaja.interceptor/format-request-interceptor/fn--280],
+      :leave nil,
+      :error nil,
+      :spec :reitit.http.interceptors.muuntaja/spec,
+      :data
+      {:swagger
+       {:consumes #{"application/json" "application/transit+msgpack" "application/transit+json" "application/edn"}}}}
+     {:name :reitit.http.coercion/coerce-response, :enter nil, :leave nil, :error nil, :spec :reitit.spec/responses}
+     {:name :reitit.http.coercion/coerce-request, :enter nil, :leave nil, :error nil, :spec :reitit.spec/parameters}
+     {:name :reitit.interceptor/handler,
+      :enter #function[reitit.interceptor/fn--1639/fn--1640],
+      :leave nil,
+      :error nil,
+      :reitit.interceptor/handler #function[dex-api.people.http-in/eval9581/save--9586]}],
+    :queue
+    [{:name :reitit.http.interceptors.parameters/parameters,
+      :enter #function[reitit.http.interceptors.parameters/parameters-interceptor/fn--336],
+      :leave nil,
+      :error nil}
+     {:name :reitit.http.interceptors.muuntaja/format-negotiate,
+      :enter #function[muuntaja.interceptor/format-negotiate-interceptor/fn--277],
+      :leave nil,
+      :error nil,
+      :spec :reitit.http.interceptors.muuntaja/spec}
+     {:name :reitit.http.interceptors.muuntaja/format-response,
+      :enter nil,
+      :leave #function[muuntaja.interceptor/format-response-interceptor/fn--283],
+      :error nil,
+      :spec :reitit.http.interceptors.muuntaja/spec,
+      :data
+      {:swagger
+       {:produces #{"application/json" "application/transit+msgpack" "application/transit+json" "application/edn"}}}}
+     {:name :reitit.http.interceptors.exception/exception,
+      :enter nil,
+      :leave nil,
+      :error #function[reitit.http.interceptors.exception/exception-interceptor/fn--253],
+      :spec :reitit.http.interceptors.exception/spec}
+     {:name :reitit.http.interceptors.muuntaja/format-request,
+      :enter #function[muuntaja.interceptor/format-request-interceptor/fn--280],
+      :leave nil,
+      :error nil,
+      :spec :reitit.http.interceptors.muuntaja/spec,
+      :data
+      {:swagger
+       {:consumes #{"application/json" "application/transit+msgpack" "application/transit+json" "application/edn"}}}}
+     {:name :reitit.http.coercion/coerce-response, :enter nil, :leave nil, :error nil, :spec :reitit.spec/responses}
+     {:name :reitit.http.coercion/coerce-request, :enter nil, :leave nil, :error nil, :spec :reitit.spec/parameters}
+     {:name :reitit.interceptor/handler,
+      :enter #function[reitit.interceptor/fn--1639/fn--1640],
+      :leave nil,
+      :error nil,
+      :reitit.interceptor/handler #function[dex-api.people.http-in/eval9581/save--9586]}],
+    :handler nil,
+    :path "/people",
+    :method :post},
+   :put nil,
+   :delete nil,
+   :connect nil,
+   :options
+   {:data
+    {:coercion #Coercion{:name :schema},
+     :muuntaja <<Muuntaja>>,
+     :interceptors
+     [{:name :reitit.http.interceptors.parameters/parameters,
+       :compile #function[reitit.http.interceptors.parameters/parameters-interceptor/fn--332],
+       :enter #function[reitit.http.interceptors.parameters/parameters-interceptor/fn--336]}
+      {:name :reitit.http.interceptors.muuntaja/format-negotiate,
+       :spec :reitit.http.interceptors.muuntaja/spec,
+       :compile #function[reitit.http.interceptors.muuntaja/format-negotiate-interceptor/fn--307]}
+      {:name :reitit.http.interceptors.muuntaja/format-response,
+       :spec :reitit.http.interceptors.muuntaja/spec,
+       :compile #function[reitit.http.interceptors.muuntaja/format-response-interceptor/fn--321]}
+      {:name :reitit.http.interceptors.exception/exception,
+       :spec :reitit.http.interceptors.exception/spec,
+       :error #function[reitit.http.interceptors.exception/exception-interceptor/fn--253]}
+      {:name :reitit.http.interceptors.muuntaja/format-request,
+       :spec :reitit.http.interceptors.muuntaja/spec,
+       :compile #function[reitit.http.interceptors.muuntaja/format-request-interceptor/fn--314]}
+      {:name :reitit.http.coercion/coerce-response,
+       :spec :reitit.spec/responses,
+       :compile #function[reitit.http.coercion/coerce-response-interceptor/fn--345]}
+      {:name :reitit.http.coercion/coerce-request,
+       :spec :reitit.spec/parameters,
+       :compile #function[reitit.http.coercion/coerce-request-interceptor/fn--337]}],
+     :no-doc true,
+     :handler #function[reitit.ring/fn--1953/fn--1962]},
+    :interceptors
+    [{:name :reitit.http.interceptors.parameters/parameters,
+      :enter #function[reitit.http.interceptors.parameters/parameters-interceptor/fn--336],
+      :leave nil,
+      :error nil}
+     {:name :reitit.http.interceptors.muuntaja/format-negotiate,
+      :enter #function[muuntaja.interceptor/format-negotiate-interceptor/fn--277],
+      :leave nil,
+      :error nil,
+      :spec :reitit.http.interceptors.muuntaja/spec}
+     {:name :reitit.http.interceptors.muuntaja/format-response,
+      :enter nil,
+      :leave #function[muuntaja.interceptor/format-response-interceptor/fn--283],
+      :error nil,
+      :spec :reitit.http.interceptors.muuntaja/spec,
+      :data
+      {:swagger
+       {:produces #{"application/json" "application/transit+msgpack" "application/transit+json" "application/edn"}}}}
+     {:name :reitit.http.interceptors.exception/exception,
+      :enter nil,
+      :leave nil,
+      :error #function[reitit.http.interceptors.exception/exception-interceptor/fn--253],
+      :spec :reitit.http.interceptors.exception/spec}
+     {:name :reitit.http.interceptors.muuntaja/format-request,
+      :enter #function[muuntaja.interceptor/format-request-interceptor/fn--280],
+      :leave nil,
+      :error nil,
+      :spec :reitit.http.interceptors.muuntaja/spec,
+      :data
+      {:swagger
+       {:consumes #{"application/json" "application/transit+msgpack" "application/transit+json" "application/edn"}}}}
+     {:name :reitit.http.coercion/coerce-response, :enter nil, :leave nil, :error nil, :spec :reitit.spec/responses}
+     {:name :reitit.http.coercion/coerce-request, :enter nil, :leave nil, :error nil, :spec :reitit.spec/parameters}
+     {:name :reitit.interceptor/handler,
+      :enter #function[reitit.interceptor/fn--1639/fn--1640],
+      :leave nil,
+      :error nil,
+      :reitit.interceptor/handler #function[reitit.ring/fn--1953/fn--1962]}],
+    :queue
+    [{:name :reitit.http.interceptors.parameters/parameters,
+      :enter #function[reitit.http.interceptors.parameters/parameters-interceptor/fn--336],
+      :leave nil,
+      :error nil}
+     {:name :reitit.http.interceptors.muuntaja/format-negotiate,
+      :enter #function[muuntaja.interceptor/format-negotiate-interceptor/fn--277],
+      :leave nil,
+      :error nil,
+      :spec :reitit.http.interceptors.muuntaja/spec}
+     {:name :reitit.http.interceptors.muuntaja/format-response,
+      :enter nil,
+      :leave #function[muuntaja.interceptor/format-response-interceptor/fn--283],
+      :error nil,
+      :spec :reitit.http.interceptors.muuntaja/spec,
+      :data
+      {:swagger
+       {:produces #{"application/json" "application/transit+msgpack" "application/transit+json" "application/edn"}}}}
+     {:name :reitit.http.interceptors.exception/exception,
+      :enter nil,
+      :leave nil,
+      :error #function[reitit.http.interceptors.exception/exception-interceptor/fn--253],
+      :spec :reitit.http.interceptors.exception/spec}
+     {:name :reitit.http.interceptors.muuntaja/format-request,
+      :enter #function[muuntaja.interceptor/format-request-interceptor/fn--280],
+      :leave nil,
+      :error nil,
+      :spec :reitit.http.interceptors.muuntaja/spec,
+      :data
+      {:swagger
+       {:consumes #{"application/json" "application/transit+msgpack" "application/transit+json" "application/edn"}}}}
+     {:name :reitit.http.coercion/coerce-response, :enter nil, :leave nil, :error nil, :spec :reitit.spec/responses}
+     {:name :reitit.http.coercion/coerce-request, :enter nil, :leave nil, :error nil, :spec :reitit.spec/parameters}
+     {:name :reitit.interceptor/handler,
+      :enter #function[reitit.interceptor/fn--1639/fn--1640],
+      :leave nil,
+      :error nil,
+      :reitit.interceptor/handler #function[reitit.ring/fn--1953/fn--1962]}],
+    :handler nil,
+    :path "/people",
+    :method :options},
+   :trace nil,
+   :patch nil},
+  :path-params {},
+  :path "/people"},
+ :reitit.core/router
+ #object[reitit.core$mixed_router$reify__1388 0x190b4008 "reitit.core$mixed_router$reify__1388@190b4008"],
+ :protocol "HTTP/1.1",
+ :async-supported? true,
+ :remote-addr "[0:0:0:0:0:0:0:1]",
+ :params {},
+ :servlet-response #object[org.eclipse.jetty.server.Response 0x1dd01ed "null 200 \n\r\n"],
+ :body-params {:birthdate "20/02/1965", :email "selma.bouvier@yahoo.com", :name "Selma Bouvier"},
+ :servlet #object[io.pedestal.http.servlet.FnServlet 0x2e1d0e40 "io.pedestal.http.servlet.FnServlet@2e1d0e40"],
+ :headers
+ {"accept" "*/*",
+  "user-agent" "insomnia/2022.7.5",
+  "host" "localhost:8080",
+  "content-length" "93",
+  "content-type" "application/json"},
+ :server-port 8080,
+ :servlet-request #object[org.eclipse.jetty.server.Request 0x7eba9d67 "Request(null null)@7eba9d67"],
+ :muuntaja/request {:format "application/json", :charset "utf-8", :raw-format "application/json"},
+ :components
+ {:database
+  {:settings {:dbtype "postgresql", :host "localhost", :dbname "dex", :username "postgres", :password "postgres"},
+   :connection
+   {:connectable #object[com.zaxxer.hikari.HikariDataSource 0x7629e0b4 "HikariDataSource (null)"],
+    :options {:builder-fn #function[next.jdbc.result-set/as-unqualified-lower-maps]}}}},
+ :content-length 93,
+ :form-params {},
+ :query-params {},
+ :content-type "application/json",
+ :path-info "/people",
+ :character-encoding "UTF-8",
+ :uri "/people",
+ :server-name "localhost",
+ :query-string nil,
+ :path-params {},
+ :muuntaja/response {:format "application/json", :charset "utf-8", :raw-format "*/*"},
+ :body
+ #object[org.eclipse.jetty.server.HttpInputOverHTTP 0x1ee72e80 "HttpInputOverHTTP@1ee72e80[c=93,q=0,[0]=null,s=EOF]"],
+ :scheme :http,
+ :request-method :get,
+ :context-path ""}
+clj꞉dex-api.people.http-in꞉> 
+nil
+clj꞉dex-api.people.http-in꞉> 
+{:reitit.core/match
+ {:template "/people",
+  :data
+  {:coercion #Coercion{:name :schema},
+   :muuntaja <<Muuntaja>>,
+   :interceptors
+   [{:name :reitit.http.interceptors.parameters/parameters,
+     :compile #function[reitit.http.interceptors.parameters/parameters-interceptor/fn--332],
+     :enter #function[reitit.http.interceptors.parameters/parameters-interceptor/fn--336]}
+    {:name :reitit.http.interceptors.muuntaja/format-negotiate,
+     :spec :reitit.http.interceptors.muuntaja/spec,
+     :compile #function[reitit.http.interceptors.muuntaja/format-negotiate-interceptor/fn--307]}
+    {:name :reitit.http.interceptors.muuntaja/format-response,
+     :spec :reitit.http.interceptors.muuntaja/spec,
+     :compile #function[reitit.http.interceptors.muuntaja/format-response-interceptor/fn--321]}
+    {:name :reitit.http.interceptors.exception/exception,
+     :spec :reitit.http.interceptors.exception/spec,
+     :error #function[reitit.http.interceptors.exception/exception-interceptor/fn--253]}
+    {:name :reitit.http.interceptors.muuntaja/format-request,
+     :spec :reitit.http.interceptors.muuntaja/spec,
+     :compile #function[reitit.http.interceptors.muuntaja/format-request-interceptor/fn--314]}
+    {:name :reitit.http.coercion/coerce-response,
+     :spec :reitit.spec/responses,
+     :compile #function[reitit.http.coercion/coerce-response-interceptor/fn--345]}
+    {:name :reitit.http.coercion/coerce-request,
+     :spec :reitit.spec/parameters,
+     :compile #function[reitit.http.coercion/coerce-request-interceptor/fn--337]}],
+   :get
+   {:summary "Displays all people registered.",
+    :handler #function[dex-api.people.http-in/eval9557/index--9562],
+    :responses
+    {200 {:body [{:name java.lang.String, :email java.lang.String, :birthdate java.time.LocalDate, :id Int}]}}},
+   :post {:summary "Registers a new person.", :handler #function[dex-api.people.http-in/eval9581/save--9586]}},
+  :result
+  {:get
+   {:data
+    {:coercion #Coercion{:name :schema},
+     :muuntaja <<Muuntaja>>,
+     :interceptors
+     [{:name :reitit.http.interceptors.parameters/parameters,
+       :compile #function[reitit.http.interceptors.parameters/parameters-interceptor/fn--332],
+       :enter #function[reitit.http.interceptors.parameters/parameters-interceptor/fn--336]}
+      {:name :reitit.http.interceptors.muuntaja/format-negotiate,
+       :spec :reitit.http.interceptors.muuntaja/spec,
+       :compile #function[reitit.http.interceptors.muuntaja/format-negotiate-interceptor/fn--307]}
+      {:name :reitit.http.interceptors.muuntaja/format-response,
+       :spec :reitit.http.interceptors.muuntaja/spec,
+       :compile #function[reitit.http.interceptors.muuntaja/format-response-interceptor/fn--321]}
+      {:name :reitit.http.interceptors.exception/exception,
+       :spec :reitit.http.interceptors.exception/spec,
+       :error #function[reitit.http.interceptors.exception/exception-interceptor/fn--253]}
+      {:name :reitit.http.interceptors.muuntaja/format-request,
+       :spec :reitit.http.interceptors.muuntaja/spec,
+       :compile #function[reitit.http.interceptors.muuntaja/format-request-interceptor/fn--314]}
+      {:name :reitit.http.coercion/coerce-response,
+       :spec :reitit.spec/responses,
+       :compile #function[reitit.http.coercion/coerce-response-interceptor/fn--345]}
+      {:name :reitit.http.coercion/coerce-request,
+       :spec :reitit.spec/parameters,
+       :compile #function[reitit.http.coercion/coerce-request-interceptor/fn--337]}],
+     :summary "Displays all people registered.",
+     :handler #function[dex-api.people.http-in/eval9557/index--9562],
+     :responses
+     {200 {:body [{:name java.lang.String, :email java.lang.String, :birthdate java.time.LocalDate, :id Int}]}}},
+    :interceptors
+    [{:name :reitit.http.interceptors.parameters/parameters,
+      :enter #function[reitit.http.interceptors.parameters/parameters-interceptor/fn--336],
+      :leave nil,
+      :error nil}
+     {:name :reitit.http.interceptors.muuntaja/format-negotiate,
+      :enter #function[muuntaja.interceptor/format-negotiate-interceptor/fn--277],
+      :leave nil,
+      :error nil,
+      :spec :reitit.http.interceptors.muuntaja/spec}
+     {:name :reitit.http.interceptors.muuntaja/format-response,
+      :enter nil,
+      :leave #function[muuntaja.interceptor/format-response-interceptor/fn--283],
+      :error nil,
+      :spec :reitit.http.interceptors.muuntaja/spec,
+      :data
+      {:swagger
+       {:produces #{"application/json" "application/transit+msgpack" "application/transit+json" "application/edn"}}}}
+     {:name :reitit.http.interceptors.exception/exception,
+      :enter nil,
+      :leave nil,
+      :error #function[reitit.http.interceptors.exception/exception-interceptor/fn--253],
+      :spec :reitit.http.interceptors.exception/spec}
+     {:name :reitit.http.interceptors.muuntaja/format-request,
+      :enter #function[muuntaja.interceptor/format-request-interceptor/fn--280],
+      :leave nil,
+      :error nil,
+      :spec :reitit.http.interceptors.muuntaja/spec,
+      :data
+      {:swagger
+       {:consumes #{"application/json" "application/transit+msgpack" "application/transit+json" "application/edn"}}}}
+     {:name :reitit.http.coercion/coerce-response,
+      :enter nil,
+      :leave #function[reitit.http.coercion/coerce-response-interceptor/fn--345/fn--347],
+      :error nil,
+      :spec :reitit.spec/responses}
+     {:name :reitit.http.coercion/coerce-request, :enter nil, :leave nil, :error nil, :spec :reitit.spec/parameters}
+     {:name :reitit.interceptor/handler,
+      :enter #function[reitit.interceptor/fn--1639/fn--1640],
+      :leave nil,
+      :error nil,
+      :reitit.interceptor/handler #function[dex-api.people.http-in/eval9557/index--9562]}],
+    :queue
+    [{:name :reitit.http.interceptors.parameters/parameters,
+      :enter #function[reitit.http.interceptors.parameters/parameters-interceptor/fn--336],
+      :leave nil,
+      :error nil}
+     {:name :reitit.http.interceptors.muuntaja/format-negotiate,
+      :enter #function[muuntaja.interceptor/format-negotiate-interceptor/fn--277],
+      :leave nil,
+      :error nil,
+      :spec :reitit.http.interceptors.muuntaja/spec}
+     {:name :reitit.http.interceptors.muuntaja/format-response,
+      :enter nil,
+      :leave #function[muuntaja.interceptor/format-response-interceptor/fn--283],
+      :error nil,
+      :spec :reitit.http.interceptors.muuntaja/spec,
+      :data
+      {:swagger
+       {:produces #{"application/json" "application/transit+msgpack" "application/transit+json" "application/edn"}}}}
+     {:name :reitit.http.interceptors.exception/exception,
+      :enter nil,
+      :leave nil,
+      :error #function[reitit.http.interceptors.exception/exception-interceptor/fn--253],
+      :spec :reitit.http.interceptors.exception/spec}
+     {:name :reitit.http.interceptors.muuntaja/format-request,
+      :enter #function[muuntaja.interceptor/format-request-interceptor/fn--280],
+      :leave nil,
+      :error nil,
+      :spec :reitit.http.interceptors.muuntaja/spec,
+      :data
+      {:swagger
+       {:consumes #{"application/json" "application/transit+msgpack" "application/transit+json" "application/edn"}}}}
+     {:name :reitit.http.coercion/coerce-response,
+      :enter nil,
+      :leave #function[reitit.http.coercion/coerce-response-interceptor/fn--345/fn--347],
+      :error nil,
+      :spec :reitit.spec/responses}
+     {:name :reitit.http.coercion/coerce-request, :enter nil, :leave nil, :error nil, :spec :reitit.spec/parameters}
+     {:name :reitit.interceptor/handler,
+      :enter #function[reitit.interceptor/fn--1639/fn--1640],
+      :leave nil,
+      :error nil,
+      :reitit.interceptor/handler #function[dex-api.people.http-in/eval9557/index--9562]}],
+    :handler nil,
+    :path "/people",
+    :method :get},
+   :head nil,
+   :post
+   {:data
+    {:coercion #Coercion{:name :schema},
+     :muuntaja <<Muuntaja>>,
+     :interceptors
+     [{:name :reitit.http.interceptors.parameters/parameters,
+       :compile #function[reitit.http.interceptors.parameters/parameters-interceptor/fn--332],
+       :enter #function[reitit.http.interceptors.parameters/parameters-interceptor/fn--336]}
+      {:name :reitit.http.interceptors.muuntaja/format-negotiate,
+       :spec :reitit.http.interceptors.muuntaja/spec,
+       :compile #function[reitit.http.interceptors.muuntaja/format-negotiate-interceptor/fn--307]}
+      {:name :reitit.http.interceptors.muuntaja/format-response,
+       :spec :reitit.http.interceptors.muuntaja/spec,
+       :compile #function[reitit.http.interceptors.muuntaja/format-response-interceptor/fn--321]}
+      {:name :reitit.http.interceptors.exception/exception,
+       :spec :reitit.http.interceptors.exception/spec,
+       :error #function[reitit.http.interceptors.exception/exception-interceptor/fn--253]}
+      {:name :reitit.http.interceptors.muuntaja/format-request,
+       :spec :reitit.http.interceptors.muuntaja/spec,
+       :compile #function[reitit.http.interceptors.muuntaja/format-request-interceptor/fn--314]}
+      {:name :reitit.http.coercion/coerce-response,
+       :spec :reitit.spec/responses,
+       :compile #function[reitit.http.coercion/coerce-response-interceptor/fn--345]}
+      {:name :reitit.http.coercion/coerce-request,
+       :spec :reitit.spec/parameters,
+       :compile #function[reitit.http.coercion/coerce-request-interceptor/fn--337]}],
+     :summary "Registers a new person.",
+     :handler #function[dex-api.people.http-in/eval9581/save--9586]},
+    :interceptors
+    [{:name :reitit.http.interceptors.parameters/parameters,
+      :enter #function[reitit.http.interceptors.parameters/parameters-interceptor/fn--336],
+      :leave nil,
+      :error nil}
+     {:name :reitit.http.interceptors.muuntaja/format-negotiate,
+      :enter #function[muuntaja.interceptor/format-negotiate-interceptor/fn--277],
+      :leave nil,
+      :error nil,
+      :spec :reitit.http.interceptors.muuntaja/spec}
+     {:name :reitit.http.interceptors.muuntaja/format-response,
+      :enter nil,
+      :leave #function[muuntaja.interceptor/format-response-interceptor/fn--283],
+      :error nil,
+      :spec :reitit.http.interceptors.muuntaja/spec,
+      :data
+      {:swagger
+       {:produces #{"application/json" "application/transit+msgpack" "application/transit+json" "application/edn"}}}}
+     {:name :reitit.http.interceptors.exception/exception,
+      :enter nil,
+      :leave nil,
+      :error #function[reitit.http.interceptors.exception/exception-interceptor/fn--253],
+      :spec :reitit.http.interceptors.exception/spec}
+     {:name :reitit.http.interceptors.muuntaja/format-request,
+      :enter #function[muuntaja.interceptor/format-request-interceptor/fn--280],
+      :leave nil,
+      :error nil,
+      :spec :reitit.http.interceptors.muuntaja/spec,
+      :data
+      {:swagger
+       {:consumes #{"application/json" "application/transit+msgpack" "application/transit+json" "application/edn"}}}}
+     {:name :reitit.http.coercion/coerce-response, :enter nil, :leave nil, :error nil, :spec :reitit.spec/responses}
+     {:name :reitit.http.coercion/coerce-request, :enter nil, :leave nil, :error nil, :spec :reitit.spec/parameters}
+     {:name :reitit.interceptor/handler,
+      :enter #function[reitit.interceptor/fn--1639/fn--1640],
+      :leave nil,
+      :error nil,
+      :reitit.interceptor/handler #function[dex-api.people.http-in/eval9581/save--9586]}],
+    :queue
+    [{:name :reitit.http.interceptors.parameters/parameters,
+      :enter #function[reitit.http.interceptors.parameters/parameters-interceptor/fn--336],
+      :leave nil,
+      :error nil}
+     {:name :reitit.http.interceptors.muuntaja/format-negotiate,
+      :enter #function[muuntaja.interceptor/format-negotiate-interceptor/fn--277],
+      :leave nil,
+      :error nil,
+      :spec :reitit.http.interceptors.muuntaja/spec}
+     {:name :reitit.http.interceptors.muuntaja/format-response,
+      :enter nil,
+      :leave #function[muuntaja.interceptor/format-response-interceptor/fn--283],
+      :error nil,
+      :spec :reitit.http.interceptors.muuntaja/spec,
+      :data
+      {:swagger
+       {:produces #{"application/json" "application/transit+msgpack" "application/transit+json" "application/edn"}}}}
+     {:name :reitit.http.interceptors.exception/exception,
+      :enter nil,
+      :leave nil,
+      :error #function[reitit.http.interceptors.exception/exception-interceptor/fn--253],
+      :spec :reitit.http.interceptors.exception/spec}
+     {:name :reitit.http.interceptors.muuntaja/format-request,
+      :enter #function[muuntaja.interceptor/format-request-interceptor/fn--280],
+      :leave nil,
+      :error nil,
+      :spec :reitit.http.interceptors.muuntaja/spec,
+      :data
+      {:swagger
+       {:consumes #{"application/json" "application/transit+msgpack" "application/transit+json" "application/edn"}}}}
+     {:name :reitit.http.coercion/coerce-response, :enter nil, :leave nil, :error nil, :spec :reitit.spec/responses}
+     {:name :reitit.http.coercion/coerce-request, :enter nil, :leave nil, :error nil, :spec :reitit.spec/parameters}
+     {:name :reitit.interceptor/handler,
+      :enter #function[reitit.interceptor/fn--1639/fn--1640],
+      :leave nil,
+      :error nil,
+      :reitit.interceptor/handler #function[dex-api.people.http-in/eval9581/save--9586]}],
+    :handler nil,
+    :path "/people",
+    :method :post},
+   :put nil,
+   :delete nil,
+   :connect nil,
+   :options
+   {:data
+    {:coercion #Coercion{:name :schema},
+     :muuntaja <<Muuntaja>>,
+     :interceptors
+     [{:name :reitit.http.interceptors.parameters/parameters,
+       :compile #function[reitit.http.interceptors.parameters/parameters-interceptor/fn--332],
+       :enter #function[reitit.http.interceptors.parameters/parameters-interceptor/fn--336]}
+      {:name :reitit.http.interceptors.muuntaja/format-negotiate,
+       :spec :reitit.http.interceptors.muuntaja/spec,
+       :compile #function[reitit.http.interceptors.muuntaja/format-negotiate-interceptor/fn--307]}
+      {:name :reitit.http.interceptors.muuntaja/format-response,
+       :spec :reitit.http.interceptors.muuntaja/spec,
+       :compile #function[reitit.http.interceptors.muuntaja/format-response-interceptor/fn--321]}
+      {:name :reitit.http.interceptors.exception/exception,
+       :spec :reitit.http.interceptors.exception/spec,
+       :error #function[reitit.http.interceptors.exception/exception-interceptor/fn--253]}
+      {:name :reitit.http.interceptors.muuntaja/format-request,
+       :spec :reitit.http.interceptors.muuntaja/spec,
+       :compile #function[reitit.http.interceptors.muuntaja/format-request-interceptor/fn--314]}
+      {:name :reitit.http.coercion/coerce-response,
+       :spec :reitit.spec/responses,
+       :compile #function[reitit.http.coercion/coerce-response-interceptor/fn--345]}
+      {:name :reitit.http.coercion/coerce-request,
+       :spec :reitit.spec/parameters,
+       :compile #function[reitit.http.coercion/coerce-request-interceptor/fn--337]}],
+     :no-doc true,
+     :handler #function[reitit.ring/fn--1953/fn--1962]},
+    :interceptors
+    [{:name :reitit.http.interceptors.parameters/parameters,
+      :enter #function[reitit.http.interceptors.parameters/parameters-interceptor/fn--336],
+      :leave nil,
+      :error nil}
+     {:name :reitit.http.interceptors.muuntaja/format-negotiate,
+      :enter #function[muuntaja.interceptor/format-negotiate-interceptor/fn--277],
+      :leave nil,
+      :error nil,
+      :spec :reitit.http.interceptors.muuntaja/spec}
+     {:name :reitit.http.interceptors.muuntaja/format-response,
+      :enter nil,
+      :leave #function[muuntaja.interceptor/format-response-interceptor/fn--283],
+      :error nil,
+      :spec :reitit.http.interceptors.muuntaja/spec,
+      :data
+      {:swagger
+       {:produces #{"application/json" "application/transit+msgpack" "application/transit+json" "application/edn"}}}}
+     {:name :reitit.http.interceptors.exception/exception,
+      :enter nil,
+      :leave nil,
+      :error #function[reitit.http.interceptors.exception/exception-interceptor/fn--253],
+      :spec :reitit.http.interceptors.exception/spec}
+     {:name :reitit.http.interceptors.muuntaja/format-request,
+      :enter #function[muuntaja.interceptor/format-request-interceptor/fn--280],
+      :leave nil,
+      :error nil,
+      :spec :reitit.http.interceptors.muuntaja/spec,
+      :data
+      {:swagger
+       {:consumes #{"application/json" "application/transit+msgpack" "application/transit+json" "application/edn"}}}}
+     {:name :reitit.http.coercion/coerce-response, :enter nil, :leave nil, :error nil, :spec :reitit.spec/responses}
+     {:name :reitit.http.coercion/coerce-request, :enter nil, :leave nil, :error nil, :spec :reitit.spec/parameters}
+     {:name :reitit.interceptor/handler,
+      :enter #function[reitit.interceptor/fn--1639/fn--1640],
+      :leave nil,
+      :error nil,
+      :reitit.interceptor/handler #function[reitit.ring/fn--1953/fn--1962]}],
+    :queue
+    [{:name :reitit.http.interceptors.parameters/parameters,
+      :enter #function[reitit.http.interceptors.parameters/parameters-interceptor/fn--336],
+      :leave nil,
+      :error nil}
+     {:name :reitit.http.interceptors.muuntaja/format-negotiate,
+      :enter #function[muuntaja.interceptor/format-negotiate-interceptor/fn--277],
+      :leave nil,
+      :error nil,
+      :spec :reitit.http.interceptors.muuntaja/spec}
+     {:name :reitit.http.interceptors.muuntaja/format-response,
+      :enter nil,
+      :leave #function[muuntaja.interceptor/format-response-interceptor/fn--283],
+      :error nil,
+      :spec :reitit.http.interceptors.muuntaja/spec,
+      :data
+      {:swagger
+       {:produces #{"application/json" "application/transit+msgpack" "application/transit+json" "application/edn"}}}}
+     {:name :reitit.http.interceptors.exception/exception,
+      :enter nil,
+      :leave nil,
+      :error #function[reitit.http.interceptors.exception/exception-interceptor/fn--253],
+      :spec :reitit.http.interceptors.exception/spec}
+     {:name :reitit.http.interceptors.muuntaja/format-request,
+      :enter #function[muuntaja.interceptor/format-request-interceptor/fn--280],
+      :leave nil,
+      :error nil,
+      :spec :reitit.http.interceptors.muuntaja/spec,
+      :data
+      {:swagger
+       {:consumes #{"application/json" "application/transit+msgpack" "application/transit+json" "application/edn"}}}}
+     {:name :reitit.http.coercion/coerce-response, :enter nil, :leave nil, :error nil, :spec :reitit.spec/responses}
+     {:name :reitit.http.coercion/coerce-request, :enter nil, :leave nil, :error nil, :spec :reitit.spec/parameters}
+     {:name :reitit.interceptor/handler,
+      :enter #function[reitit.interceptor/fn--1639/fn--1640],
+      :leave nil,
+      :error nil,
+      :reitit.interceptor/handler #function[reitit.ring/fn--1953/fn--1962]}],
+    :handler nil,
+    :path "/people",
+    :method :options},
+   :trace nil,
+   :patch nil},
+  :path-params {},
+  :path "/people"},
+ :reitit.core/router
+ #object[reitit.core$mixed_router$reify__1388 0x19e335c3 "reitit.core$mixed_router$reify__1388@19e335c3"],
+ :protocol "HTTP/1.1",
+ :async-supported? true,
+ :remote-addr "[0:0:0:0:0:0:0:1]",
+ :params {},
+ :servlet-response #object[org.eclipse.jetty.server.Response 0x1dd01ed "null 200 \n\r\n"],
+ :body-params {:birthdate "20/02/1965", :email "selma.bouvier@yahoo.com", :name "Selma Bouvier"},
+ :servlet #object[io.pedestal.http.servlet.FnServlet 0x2e1d0e40 "io.pedestal.http.servlet.FnServlet@2e1d0e40"],
+ :headers
+ {"accept" "*/*",
+  "user-agent" "insomnia/2022.7.5",
+  "host" "localhost:8080",
+  "content-length" "93",
+  "content-type" "application/json"},
+ :server-port 8080,
+ :servlet-request #object[org.eclipse.jetty.server.Request 0x7eba9d67 "Request(null null)@7eba9d67"],
+ :muuntaja/request {:format "application/json", :charset "utf-8", :raw-format "application/json"},
+ :components
+ {:database
+  {:settings {:dbtype "postgresql", :host "localhost", :dbname "dex", :username "postgres", :password "postgres"},
+   :connection
+   {:connectable #object[com.zaxxer.hikari.HikariDataSource 0x7629e0b4 "HikariDataSource (null)"],
+    :options {:builder-fn #function[next.jdbc.result-set/as-unqualified-lower-maps]}}}},
+ :content-length 93,
+ :form-params {},
+ :query-params {},
+ :content-type "application/json",
+ :path-info "/people",
+ :character-encoding "UTF-8",
+ :uri "/people",
+ :server-name "localhost",
+ :query-string nil,
+ :path-params {},
+ :muuntaja/response {:format "application/json", :charset "utf-8", :raw-format "*/*"},
+ :body
+ #object[org.eclipse.jetty.server.HttpInputOverHTTP 0x1ee72e80 "HttpInputOverHTTP@1ee72e80[c=93,q=0,[0]=null,s=EOF]"],
+ :scheme :http,
+ :request-method :get,
+ :context-path ""}
+clj꞉dex-api.people.http-in꞉> 
+{:reitit.core/match
+ {:template "/people",
+  :data
+  {:coercion #Coercion{:name :schema},
+   :muuntaja <<Muuntaja>>,
+   :interceptors
+   [{:name :reitit.http.interceptors.parameters/parameters,
+     :compile #function[reitit.http.interceptors.parameters/parameters-interceptor/fn--332],
+     :enter #function[reitit.http.interceptors.parameters/parameters-interceptor/fn--336]}
+    {:name :reitit.http.interceptors.muuntaja/format-negotiate,
+     :spec :reitit.http.interceptors.muuntaja/spec,
+     :compile #function[reitit.http.interceptors.muuntaja/format-negotiate-interceptor/fn--307]}
+    {:name :reitit.http.interceptors.muuntaja/format-response,
+     :spec :reitit.http.interceptors.muuntaja/spec,
+     :compile #function[reitit.http.interceptors.muuntaja/format-response-interceptor/fn--321]}
+    {:name :reitit.http.interceptors.exception/exception,
+     :spec :reitit.http.interceptors.exception/spec,
+     :error #function[reitit.http.interceptors.exception/exception-interceptor/fn--253]}
+    {:name :reitit.http.interceptors.muuntaja/format-request,
+     :spec :reitit.http.interceptors.muuntaja/spec,
+     :compile #function[reitit.http.interceptors.muuntaja/format-request-interceptor/fn--314]}
+    {:name :reitit.http.coercion/coerce-response,
+     :spec :reitit.spec/responses,
+     :compile #function[reitit.http.coercion/coerce-response-interceptor/fn--345]}
+    {:name :reitit.http.coercion/coerce-request,
+     :spec :reitit.spec/parameters,
+     :compile #function[reitit.http.coercion/coerce-request-interceptor/fn--337]}],
+   :get
+   {:summary "Displays all people registered.",
+    :handler #function[dex-api.people.http-in/eval9557/index--9562],
+    :responses
+    {200 {:body [{:name java.lang.String, :email java.lang.String, :birthdate java.time.LocalDate, :id Int}]}}},
+   :post {:summary "Registers a new person.", :handler #function[dex-api.people.http-in/eval9581/save--9586]}},
+  :result
+  {:get
+   {:data
+    {:coercion #Coercion{:name :schema},
+     :muuntaja <<Muuntaja>>,
+     :interceptors
+     [{:name :reitit.http.interceptors.parameters/parameters,
+       :compile #function[reitit.http.interceptors.parameters/parameters-interceptor/fn--332],
+       :enter #function[reitit.http.interceptors.parameters/parameters-interceptor/fn--336]}
+      {:name :reitit.http.interceptors.muuntaja/format-negotiate,
+       :spec :reitit.http.interceptors.muuntaja/spec,
+       :compile #function[reitit.http.interceptors.muuntaja/format-negotiate-interceptor/fn--307]}
+      {:name :reitit.http.interceptors.muuntaja/format-response,
+       :spec :reitit.http.interceptors.muuntaja/spec,
+       :compile #function[reitit.http.interceptors.muuntaja/format-response-interceptor/fn--321]}
+      {:name :reitit.http.interceptors.exception/exception,
+       :spec :reitit.http.interceptors.exception/spec,
+       :error #function[reitit.http.interceptors.exception/exception-interceptor/fn--253]}
+      {:name :reitit.http.interceptors.muuntaja/format-request,
+       :spec :reitit.http.interceptors.muuntaja/spec,
+       :compile #function[reitit.http.interceptors.muuntaja/format-request-interceptor/fn--314]}
+      {:name :reitit.http.coercion/coerce-response,
+       :spec :reitit.spec/responses,
+       :compile #function[reitit.http.coercion/coerce-response-interceptor/fn--345]}
+      {:name :reitit.http.coercion/coerce-request,
+       :spec :reitit.spec/parameters,
+       :compile #function[reitit.http.coercion/coerce-request-interceptor/fn--337]}],
+     :summary "Displays all people registered.",
+     :handler #function[dex-api.people.http-in/eval9557/index--9562],
+     :responses
+     {200 {:body [{:name java.lang.String, :email java.lang.String, :birthdate java.time.LocalDate, :id Int}]}}},
+    :interceptors
+    [{:name :reitit.http.interceptors.parameters/parameters,
+      :enter #function[reitit.http.interceptors.parameters/parameters-interceptor/fn--336],
+      :leave nil,
+      :error nil}
+     {:name :reitit.http.interceptors.muuntaja/format-negotiate,
+      :enter #function[muuntaja.interceptor/format-negotiate-interceptor/fn--277],
+      :leave nil,
+      :error nil,
+      :spec :reitit.http.interceptors.muuntaja/spec}
+     {:name :reitit.http.interceptors.muuntaja/format-response,
+      :enter nil,
+      :leave #function[muuntaja.interceptor/format-response-interceptor/fn--283],
+      :error nil,
+      :spec :reitit.http.interceptors.muuntaja/spec,
+      :data
+      {:swagger
+       {:produces #{"application/json" "application/transit+msgpack" "application/transit+json" "application/edn"}}}}
+     {:name :reitit.http.interceptors.exception/exception,
+      :enter nil,
+      :leave nil,
+      :error #function[reitit.http.interceptors.exception/exception-interceptor/fn--253],
+      :spec :reitit.http.interceptors.exception/spec}
+     {:name :reitit.http.interceptors.muuntaja/format-request,
+      :enter #function[muuntaja.interceptor/format-request-interceptor/fn--280],
+      :leave nil,
+      :error nil,
+      :spec :reitit.http.interceptors.muuntaja/spec,
+      :data
+      {:swagger
+       {:consumes #{"application/json" "application/transit+msgpack" "application/transit+json" "application/edn"}}}}
+     {:name :reitit.http.coercion/coerce-response,
+      :enter nil,
+      :leave #function[reitit.http.coercion/coerce-response-interceptor/fn--345/fn--347],
+      :error nil,
+      :spec :reitit.spec/responses}
+     {:name :reitit.http.coercion/coerce-request, :enter nil, :leave nil, :error nil, :spec :reitit.spec/parameters}
+     {:name :reitit.interceptor/handler,
+      :enter #function[reitit.interceptor/fn--1639/fn--1640],
+      :leave nil,
+      :error nil,
+      :reitit.interceptor/handler #function[dex-api.people.http-in/eval9557/index--9562]}],
+    :queue
+    [{:name :reitit.http.interceptors.parameters/parameters,
+      :enter #function[reitit.http.interceptors.parameters/parameters-interceptor/fn--336],
+      :leave nil,
+      :error nil}
+     {:name :reitit.http.interceptors.muuntaja/format-negotiate,
+      :enter #function[muuntaja.interceptor/format-negotiate-interceptor/fn--277],
+      :leave nil,
+      :error nil,
+      :spec :reitit.http.interceptors.muuntaja/spec}
+     {:name :reitit.http.interceptors.muuntaja/format-response,
+      :enter nil,
+      :leave #function[muuntaja.interceptor/format-response-interceptor/fn--283],
+      :error nil,
+      :spec :reitit.http.interceptors.muuntaja/spec,
+      :data
+      {:swagger
+       {:produces #{"application/json" "application/transit+msgpack" "application/transit+json" "application/edn"}}}}
+     {:name :reitit.http.interceptors.exception/exception,
+      :enter nil,
+      :leave nil,
+      :error #function[reitit.http.interceptors.exception/exception-interceptor/fn--253],
+      :spec :reitit.http.interceptors.exception/spec}
+     {:name :reitit.http.interceptors.muuntaja/format-request,
+      :enter #function[muuntaja.interceptor/format-request-interceptor/fn--280],
+      :leave nil,
+      :error nil,
+      :spec :reitit.http.interceptors.muuntaja/spec,
+      :data
+      {:swagger
+       {:consumes #{"application/json" "application/transit+msgpack" "application/transit+json" "application/edn"}}}}
+     {:name :reitit.http.coercion/coerce-response,
+      :enter nil,
+      :leave #function[reitit.http.coercion/coerce-response-interceptor/fn--345/fn--347],
+      :error nil,
+      :spec :reitit.spec/responses}
+     {:name :reitit.http.coercion/coerce-request, :enter nil, :leave nil, :error nil, :spec :reitit.spec/parameters}
+     {:name :reitit.interceptor/handler,
+      :enter #function[reitit.interceptor/fn--1639/fn--1640],
+      :leave nil,
+      :error nil,
+      :reitit.interceptor/handler #function[dex-api.people.http-in/eval9557/index--9562]}],
+    :handler nil,
+    :path "/people",
+    :method :get},
+   :head nil,
+   :post
+   {:data
+    {:coercion #Coercion{:name :schema},
+     :muuntaja <<Muuntaja>>,
+     :interceptors
+     [{:name :reitit.http.interceptors.parameters/parameters,
+       :compile #function[reitit.http.interceptors.parameters/parameters-interceptor/fn--332],
+       :enter #function[reitit.http.interceptors.parameters/parameters-interceptor/fn--336]}
+      {:name :reitit.http.interceptors.muuntaja/format-negotiate,
+       :spec :reitit.http.interceptors.muuntaja/spec,
+       :compile #function[reitit.http.interceptors.muuntaja/format-negotiate-interceptor/fn--307]}
+      {:name :reitit.http.interceptors.muuntaja/format-response,
+       :spec :reitit.http.interceptors.muuntaja/spec,
+       :compile #function[reitit.http.interceptors.muuntaja/format-response-interceptor/fn--321]}
+      {:name :reitit.http.interceptors.exception/exception,
+       :spec :reitit.http.interceptors.exception/spec,
+       :error #function[reitit.http.interceptors.exception/exception-interceptor/fn--253]}
+      {:name :reitit.http.interceptors.muuntaja/format-request,
+       :spec :reitit.http.interceptors.muuntaja/spec,
+       :compile #function[reitit.http.interceptors.muuntaja/format-request-interceptor/fn--314]}
+      {:name :reitit.http.coercion/coerce-response,
+       :spec :reitit.spec/responses,
+       :compile #function[reitit.http.coercion/coerce-response-interceptor/fn--345]}
+      {:name :reitit.http.coercion/coerce-request,
+       :spec :reitit.spec/parameters,
+       :compile #function[reitit.http.coercion/coerce-request-interceptor/fn--337]}],
+     :summary "Registers a new person.",
+     :handler #function[dex-api.people.http-in/eval9581/save--9586]},
+    :interceptors
+    [{:name :reitit.http.interceptors.parameters/parameters,
+      :enter #function[reitit.http.interceptors.parameters/parameters-interceptor/fn--336],
+      :leave nil,
+      :error nil}
+     {:name :reitit.http.interceptors.muuntaja/format-negotiate,
+      :enter #function[muuntaja.interceptor/format-negotiate-interceptor/fn--277],
+      :leave nil,
+      :error nil,
+      :spec :reitit.http.interceptors.muuntaja/spec}
+     {:name :reitit.http.interceptors.muuntaja/format-response,
+      :enter nil,
+      :leave #function[muuntaja.interceptor/format-response-interceptor/fn--283],
+      :error nil,
+      :spec :reitit.http.interceptors.muuntaja/spec,
+      :data
+      {:swagger
+       {:produces #{"application/json" "application/transit+msgpack" "application/transit+json" "application/edn"}}}}
+     {:name :reitit.http.interceptors.exception/exception,
+      :enter nil,
+      :leave nil,
+      :error #function[reitit.http.interceptors.exception/exception-interceptor/fn--253],
+      :spec :reitit.http.interceptors.exception/spec}
+     {:name :reitit.http.interceptors.muuntaja/format-request,
+      :enter #function[muuntaja.interceptor/format-request-interceptor/fn--280],
+      :leave nil,
+      :error nil,
+      :spec :reitit.http.interceptors.muuntaja/spec,
+      :data
+      {:swagger
+       {:consumes #{"application/json" "application/transit+msgpack" "application/transit+json" "application/edn"}}}}
+     {:name :reitit.http.coercion/coerce-response, :enter nil, :leave nil, :error nil, :spec :reitit.spec/responses}
+     {:name :reitit.http.coercion/coerce-request, :enter nil, :leave nil, :error nil, :spec :reitit.spec/parameters}
+     {:name :reitit.interceptor/handler,
+      :enter #function[reitit.interceptor/fn--1639/fn--1640],
+      :leave nil,
+      :error nil,
+      :reitit.interceptor/handler #function[dex-api.people.http-in/eval9581/save--9586]}],
+    :queue
+    [{:name :reitit.http.interceptors.parameters/parameters,
+      :enter #function[reitit.http.interceptors.parameters/parameters-interceptor/fn--336],
+      :leave nil,
+      :error nil}
+     {:name :reitit.http.interceptors.muuntaja/format-negotiate,
+      :enter #function[muuntaja.interceptor/format-negotiate-interceptor/fn--277],
+      :leave nil,
+      :error nil,
+      :spec :reitit.http.interceptors.muuntaja/spec}
+     {:name :reitit.http.interceptors.muuntaja/format-response,
+      :enter nil,
+      :leave #function[muuntaja.interceptor/format-response-interceptor/fn--283],
+      :error nil,
+      :spec :reitit.http.interceptors.muuntaja/spec,
+      :data
+      {:swagger
+       {:produces #{"application/json" "application/transit+msgpack" "application/transit+json" "application/edn"}}}}
+     {:name :reitit.http.interceptors.exception/exception,
+      :enter nil,
+      :leave nil,
+      :error #function[reitit.http.interceptors.exception/exception-interceptor/fn--253],
+      :spec :reitit.http.interceptors.exception/spec}
+     {:name :reitit.http.interceptors.muuntaja/format-request,
+      :enter #function[muuntaja.interceptor/format-request-interceptor/fn--280],
+      :leave nil,
+      :error nil,
+      :spec :reitit.http.interceptors.muuntaja/spec,
+      :data
+      {:swagger
+       {:consumes #{"application/json" "application/transit+msgpack" "application/transit+json" "application/edn"}}}}
+     {:name :reitit.http.coercion/coerce-response, :enter nil, :leave nil, :error nil, :spec :reitit.spec/responses}
+     {:name :reitit.http.coercion/coerce-request, :enter nil, :leave nil, :error nil, :spec :reitit.spec/parameters}
+     {:name :reitit.interceptor/handler,
+      :enter #function[reitit.interceptor/fn--1639/fn--1640],
+      :leave nil,
+      :error nil,
+      :reitit.interceptor/handler #function[dex-api.people.http-in/eval9581/save--9586]}],
+    :handler nil,
+    :path "/people",
+    :method :post},
+   :put nil,
+   :delete nil,
+   :connect nil,
+   :options
+   {:data
+    {:coercion #Coercion{:name :schema},
+     :muuntaja <<Muuntaja>>,
+     :interceptors
+     [{:name :reitit.http.interceptors.parameters/parameters,
+       :compile #function[reitit.http.interceptors.parameters/parameters-interceptor/fn--332],
+       :enter #function[reitit.http.interceptors.parameters/parameters-interceptor/fn--336]}
+      {:name :reitit.http.interceptors.muuntaja/format-negotiate,
+       :spec :reitit.http.interceptors.muuntaja/spec,
+       :compile #function[reitit.http.interceptors.muuntaja/format-negotiate-interceptor/fn--307]}
+      {:name :reitit.http.interceptors.muuntaja/format-response,
+       :spec :reitit.http.interceptors.muuntaja/spec,
+       :compile #function[reitit.http.interceptors.muuntaja/format-response-interceptor/fn--321]}
+      {:name :reitit.http.interceptors.exception/exception,
+       :spec :reitit.http.interceptors.exception/spec,
+       :error #function[reitit.http.interceptors.exception/exception-interceptor/fn--253]}
+      {:name :reitit.http.interceptors.muuntaja/format-request,
+       :spec :reitit.http.interceptors.muuntaja/spec,
+       :compile #function[reitit.http.interceptors.muuntaja/format-request-interceptor/fn--314]}
+      {:name :reitit.http.coercion/coerce-response,
+       :spec :reitit.spec/responses,
+       :compile #function[reitit.http.coercion/coerce-response-interceptor/fn--345]}
+      {:name :reitit.http.coercion/coerce-request,
+       :spec :reitit.spec/parameters,
+       :compile #function[reitit.http.coercion/coerce-request-interceptor/fn--337]}],
+     :no-doc true,
+     :handler #function[reitit.ring/fn--1953/fn--1962]},
+    :interceptors
+    [{:name :reitit.http.interceptors.parameters/parameters,
+      :enter #function[reitit.http.interceptors.parameters/parameters-interceptor/fn--336],
+      :leave nil,
+      :error nil}
+     {:name :reitit.http.interceptors.muuntaja/format-negotiate,
+      :enter #function[muuntaja.interceptor/format-negotiate-interceptor/fn--277],
+      :leave nil,
+      :error nil,
+      :spec :reitit.http.interceptors.muuntaja/spec}
+     {:name :reitit.http.interceptors.muuntaja/format-response,
+      :enter nil,
+      :leave #function[muuntaja.interceptor/format-response-interceptor/fn--283],
+      :error nil,
+      :spec :reitit.http.interceptors.muuntaja/spec,
+      :data
+      {:swagger
+       {:produces #{"application/json" "application/transit+msgpack" "application/transit+json" "application/edn"}}}}
+     {:name :reitit.http.interceptors.exception/exception,
+      :enter nil,
+      :leave nil,
+      :error #function[reitit.http.interceptors.exception/exception-interceptor/fn--253],
+      :spec :reitit.http.interceptors.exception/spec}
+     {:name :reitit.http.interceptors.muuntaja/format-request,
+      :enter #function[muuntaja.interceptor/format-request-interceptor/fn--280],
+      :leave nil,
+      :error nil,
+      :spec :reitit.http.interceptors.muuntaja/spec,
+      :data
+      {:swagger
+       {:consumes #{"application/json" "application/transit+msgpack" "application/transit+json" "application/edn"}}}}
+     {:name :reitit.http.coercion/coerce-response, :enter nil, :leave nil, :error nil, :spec :reitit.spec/responses}
+     {:name :reitit.http.coercion/coerce-request, :enter nil, :leave nil, :error nil, :spec :reitit.spec/parameters}
+     {:name :reitit.interceptor/handler,
+      :enter #function[reitit.interceptor/fn--1639/fn--1640],
+      :leave nil,
+      :error nil,
+      :reitit.interceptor/handler #function[reitit.ring/fn--1953/fn--1962]}],
+    :queue
+    [{:name :reitit.http.interceptors.parameters/parameters,
+      :enter #function[reitit.http.interceptors.parameters/parameters-interceptor/fn--336],
+      :leave nil,
+      :error nil}
+     {:name :reitit.http.interceptors.muuntaja/format-negotiate,
+      :enter #function[muuntaja.interceptor/format-negotiate-interceptor/fn--277],
+      :leave nil,
+      :error nil,
+      :spec :reitit.http.interceptors.muuntaja/spec}
+     {:name :reitit.http.interceptors.muuntaja/format-response,
+      :enter nil,
+      :leave #function[muuntaja.interceptor/format-response-interceptor/fn--283],
+      :error nil,
+      :spec :reitit.http.interceptors.muuntaja/spec,
+      :data
+      {:swagger
+       {:produces #{"application/json" "application/transit+msgpack" "application/transit+json" "application/edn"}}}}
+     {:name :reitit.http.interceptors.exception/exception,
+      :enter nil,
+      :leave nil,
+      :error #function[reitit.http.interceptors.exception/exception-interceptor/fn--253],
+      :spec :reitit.http.interceptors.exception/spec}
+     {:name :reitit.http.interceptors.muuntaja/format-request,
+      :enter #function[muuntaja.interceptor/format-request-interceptor/fn--280],
+      :leave nil,
+      :error nil,
+      :spec :reitit.http.interceptors.muuntaja/spec,
+      :data
+      {:swagger
+       {:consumes #{"application/json" "application/transit+msgpack" "application/transit+json" "application/edn"}}}}
+     {:name :reitit.http.coercion/coerce-response, :enter nil, :leave nil, :error nil, :spec :reitit.spec/responses}
+     {:name :reitit.http.coercion/coerce-request, :enter nil, :leave nil, :error nil, :spec :reitit.spec/parameters}
+     {:name :reitit.interceptor/handler,
+      :enter #function[reitit.interceptor/fn--1639/fn--1640],
+      :leave nil,
+      :error nil,
+      :reitit.interceptor/handler #function[reitit.ring/fn--1953/fn--1962]}],
+    :handler nil,
+    :path "/people",
+    :method :options},
+   :trace nil,
+   :patch nil},
+  :path-params {},
+  :path "/people"},
+ :reitit.core/router
+ #object[reitit.core$mixed_router$reify__1388 0x449f6a20 "reitit.core$mixed_router$reify__1388@449f6a20"],
+ :protocol "HTTP/1.1",
+ :async-supported? true,
+ :remote-addr "[0:0:0:0:0:0:0:1]",
+ :params {},
+ :servlet-response #object[org.eclipse.jetty.server.Response 0x1dd01ed "null 200 \n\r\n"],
+ :body-params {:birthdate "20/02/1965", :email "selma.bouvier@yahoo.com", :name "Selma Bouvier"},
+ :servlet #object[io.pedestal.http.servlet.FnServlet 0x2e1d0e40 "io.pedestal.http.servlet.FnServlet@2e1d0e40"],
+ :headers
+ {"accept" "*/*",
+  "user-agent" "insomnia/2022.7.5",
+  "host" "localhost:8080",
+  "content-length" "93",
+  "content-type" "application/json"},
+ :server-port 8080,
+ :servlet-request #object[org.eclipse.jetty.server.Request 0x7eba9d67 "Request(null null)@7eba9d67"],
+ :muuntaja/request {:format "application/json", :charset "utf-8", :raw-format "application/json"},
+ :components
+ {:database
+  {:settings {:dbtype "postgresql", :host "localhost", :dbname "dex", :username "postgres", :password "postgres"},
+   :connection
+   {:connectable #object[com.zaxxer.hikari.HikariDataSource 0x7629e0b4 "HikariDataSource (null)"],
+    :options {:builder-fn #function[next.jdbc.result-set/as-unqualified-lower-maps]}}}},
+ :content-length 93,
+ :form-params {},
+ :query-params {},
+ :content-type "application/json",
+ :path-info "/people",
+ :character-encoding "UTF-8",
+ :uri "/people",
+ :server-name "localhost",
+ :query-string nil,
+ :path-params {},
+ :muuntaja/response {:format "application/json", :charset "utf-8", :raw-format "*/*"},
+ :body
+ #object[org.eclipse.jetty.server.HttpInputOverHTTP 0x1ee72e80 "HttpInputOverHTTP@1ee72e80[c=93,q=0,[0]=null,s=EOF]"],
+ :scheme :http,
+ :request-method :get,
+ :context-path ""}
+clj꞉dex-api.people.http-in꞉> 
+{:reitit.core/match
+ {:template "/people",
+  :data
+  {:coercion #Coercion{:name :schema},
+   :muuntaja <<Muuntaja>>,
+   :interceptors
+   [{:name :reitit.http.interceptors.parameters/parameters,
+     :compile #function[reitit.http.interceptors.parameters/parameters-interceptor/fn--332],
+     :enter #function[reitit.http.interceptors.parameters/parameters-interceptor/fn--336]}
+    {:name :reitit.http.interceptors.muuntaja/format-negotiate,
+     :spec :reitit.http.interceptors.muuntaja/spec,
+     :compile #function[reitit.http.interceptors.muuntaja/format-negotiate-interceptor/fn--307]}
+    {:name :reitit.http.interceptors.muuntaja/format-response,
+     :spec :reitit.http.interceptors.muuntaja/spec,
+     :compile #function[reitit.http.interceptors.muuntaja/format-response-interceptor/fn--321]}
+    {:name :reitit.http.interceptors.exception/exception,
+     :spec :reitit.http.interceptors.exception/spec,
+     :error #function[reitit.http.interceptors.exception/exception-interceptor/fn--253]}
+    {:name :reitit.http.interceptors.muuntaja/format-request,
+     :spec :reitit.http.interceptors.muuntaja/spec,
+     :compile #function[reitit.http.interceptors.muuntaja/format-request-interceptor/fn--314]}
+    {:name :reitit.http.coercion/coerce-response,
+     :spec :reitit.spec/responses,
+     :compile #function[reitit.http.coercion/coerce-response-interceptor/fn--345]}
+    {:name :reitit.http.coercion/coerce-request,
+     :spec :reitit.spec/parameters,
+     :compile #function[reitit.http.coercion/coerce-request-interceptor/fn--337]}],
+   :get
+   {:summary "Displays all people registered.",
+    :handler #function[dex-api.people.http-in/eval9557/index--9562],
+    :responses
+    {200 {:body [{:name java.lang.String, :email java.lang.String, :birthdate java.time.LocalDate, :id Int}]}}},
+   :post {:summary "Registers a new person.", :handler #function[dex-api.people.http-in/eval9581/save--9586]}},
+  :result
+  {:get
+   {:data
+    {:coercion #Coercion{:name :schema},
+     :muuntaja <<Muuntaja>>,
+     :interceptors
+     [{:name :reitit.http.interceptors.parameters/parameters,
+       :compile #function[reitit.http.interceptors.parameters/parameters-interceptor/fn--332],
+       :enter #function[reitit.http.interceptors.parameters/parameters-interceptor/fn--336]}
+      {:name :reitit.http.interceptors.muuntaja/format-negotiate,
+       :spec :reitit.http.interceptors.muuntaja/spec,
+       :compile #function[reitit.http.interceptors.muuntaja/format-negotiate-interceptor/fn--307]}
+      {:name :reitit.http.interceptors.muuntaja/format-response,
+       :spec :reitit.http.interceptors.muuntaja/spec,
+       :compile #function[reitit.http.interceptors.muuntaja/format-response-interceptor/fn--321]}
+      {:name :reitit.http.interceptors.exception/exception,
+       :spec :reitit.http.interceptors.exception/spec,
+       :error #function[reitit.http.interceptors.exception/exception-interceptor/fn--253]}
+      {:name :reitit.http.interceptors.muuntaja/format-request,
+       :spec :reitit.http.interceptors.muuntaja/spec,
+       :compile #function[reitit.http.interceptors.muuntaja/format-request-interceptor/fn--314]}
+      {:name :reitit.http.coercion/coerce-response,
+       :spec :reitit.spec/responses,
+       :compile #function[reitit.http.coercion/coerce-response-interceptor/fn--345]}
+      {:name :reitit.http.coercion/coerce-request,
+       :spec :reitit.spec/parameters,
+       :compile #function[reitit.http.coercion/coerce-request-interceptor/fn--337]}],
+     :summary "Displays all people registered.",
+     :handler #function[dex-api.people.http-in/eval9557/index--9562],
+     :responses
+     {200 {:body [{:name java.lang.String, :email java.lang.String, :birthdate java.time.LocalDate, :id Int}]}}},
+    :interceptors
+    [{:name :reitit.http.interceptors.parameters/parameters,
+      :enter #function[reitit.http.interceptors.parameters/parameters-interceptor/fn--336],
+      :leave nil,
+      :error nil}
+     {:name :reitit.http.interceptors.muuntaja/format-negotiate,
+      :enter #function[muuntaja.interceptor/format-negotiate-interceptor/fn--277],
+      :leave nil,
+      :error nil,
+      :spec :reitit.http.interceptors.muuntaja/spec}
+     {:name :reitit.http.interceptors.muuntaja/format-response,
+      :enter nil,
+      :leave #function[muuntaja.interceptor/format-response-interceptor/fn--283],
+      :error nil,
+      :spec :reitit.http.interceptors.muuntaja/spec,
+      :data
+      {:swagger
+       {:produces #{"application/json" "application/transit+msgpack" "application/transit+json" "application/edn"}}}}
+     {:name :reitit.http.interceptors.exception/exception,
+      :enter nil,
+      :leave nil,
+      :error #function[reitit.http.interceptors.exception/exception-interceptor/fn--253],
+      :spec :reitit.http.interceptors.exception/spec}
+     {:name :reitit.http.interceptors.muuntaja/format-request,
+      :enter #function[muuntaja.interceptor/format-request-interceptor/fn--280],
+      :leave nil,
+      :error nil,
+      :spec :reitit.http.interceptors.muuntaja/spec,
+      :data
+      {:swagger
+       {:consumes #{"application/json" "application/transit+msgpack" "application/transit+json" "application/edn"}}}}
+     {:name :reitit.http.coercion/coerce-response,
+      :enter nil,
+      :leave #function[reitit.http.coercion/coerce-response-interceptor/fn--345/fn--347],
+      :error nil,
+      :spec :reitit.spec/responses}
+     {:name :reitit.http.coercion/coerce-request, :enter nil, :leave nil, :error nil, :spec :reitit.spec/parameters}
+     {:name :reitit.interceptor/handler,
+      :enter #function[reitit.interceptor/fn--1639/fn--1640],
+      :leave nil,
+      :error nil,
+      :reitit.interceptor/handler #function[dex-api.people.http-in/eval9557/index--9562]}],
+    :queue
+    [{:name :reitit.http.interceptors.parameters/parameters,
+      :enter #function[reitit.http.interceptors.parameters/parameters-interceptor/fn--336],
+      :leave nil,
+      :error nil}
+     {:name :reitit.http.interceptors.muuntaja/format-negotiate,
+      :enter #function[muuntaja.interceptor/format-negotiate-interceptor/fn--277],
+      :leave nil,
+      :error nil,
+      :spec :reitit.http.interceptors.muuntaja/spec}
+     {:name :reitit.http.interceptors.muuntaja/format-response,
+      :enter nil,
+      :leave #function[muuntaja.interceptor/format-response-interceptor/fn--283],
+      :error nil,
+      :spec :reitit.http.interceptors.muuntaja/spec,
+      :data
+      {:swagger
+       {:produces #{"application/json" "application/transit+msgpack" "application/transit+json" "application/edn"}}}}
+     {:name :reitit.http.interceptors.exception/exception,
+      :enter nil,
+      :leave nil,
+      :error #function[reitit.http.interceptors.exception/exception-interceptor/fn--253],
+      :spec :reitit.http.interceptors.exception/spec}
+     {:name :reitit.http.interceptors.muuntaja/format-request,
+      :enter #function[muuntaja.interceptor/format-request-interceptor/fn--280],
+      :leave nil,
+      :error nil,
+      :spec :reitit.http.interceptors.muuntaja/spec,
+      :data
+      {:swagger
+       {:consumes #{"application/json" "application/transit+msgpack" "application/transit+json" "application/edn"}}}}
+     {:name :reitit.http.coercion/coerce-response,
+      :enter nil,
+      :leave #function[reitit.http.coercion/coerce-response-interceptor/fn--345/fn--347],
+      :error nil,
+      :spec :reitit.spec/responses}
+     {:name :reitit.http.coercion/coerce-request, :enter nil, :leave nil, :error nil, :spec :reitit.spec/parameters}
+     {:name :reitit.interceptor/handler,
+      :enter #function[reitit.interceptor/fn--1639/fn--1640],
+      :leave nil,
+      :error nil,
+      :reitit.interceptor/handler #function[dex-api.people.http-in/eval9557/index--9562]}],
+    :handler nil,
+    :path "/people",
+    :method :get},
+   :head nil,
+   :post
+   {:data
+    {:coercion #Coercion{:name :schema},
+     :muuntaja <<Muuntaja>>,
+     :interceptors
+     [{:name :reitit.http.interceptors.parameters/parameters,
+       :compile #function[reitit.http.interceptors.parameters/parameters-interceptor/fn--332],
+       :enter #function[reitit.http.interceptors.parameters/parameters-interceptor/fn--336]}
+      {:name :reitit.http.interceptors.muuntaja/format-negotiate,
+       :spec :reitit.http.interceptors.muuntaja/spec,
+       :compile #function[reitit.http.interceptors.muuntaja/format-negotiate-interceptor/fn--307]}
+      {:name :reitit.http.interceptors.muuntaja/format-response,
+       :spec :reitit.http.interceptors.muuntaja/spec,
+       :compile #function[reitit.http.interceptors.muuntaja/format-response-interceptor/fn--321]}
+      {:name :reitit.http.interceptors.exception/exception,
+       :spec :reitit.http.interceptors.exception/spec,
+       :error #function[reitit.http.interceptors.exception/exception-interceptor/fn--253]}
+      {:name :reitit.http.interceptors.muuntaja/format-request,
+       :spec :reitit.http.interceptors.muuntaja/spec,
+       :compile #function[reitit.http.interceptors.muuntaja/format-request-interceptor/fn--314]}
+      {:name :reitit.http.coercion/coerce-response,
+       :spec :reitit.spec/responses,
+       :compile #function[reitit.http.coercion/coerce-response-interceptor/fn--345]}
+      {:name :reitit.http.coercion/coerce-request,
+       :spec :reitit.spec/parameters,
+       :compile #function[reitit.http.coercion/coerce-request-interceptor/fn--337]}],
+     :summary "Registers a new person.",
+     :handler #function[dex-api.people.http-in/eval9581/save--9586]},
+    :interceptors
+    [{:name :reitit.http.interceptors.parameters/parameters,
+      :enter #function[reitit.http.interceptors.parameters/parameters-interceptor/fn--336],
+      :leave nil,
+      :error nil}
+     {:name :reitit.http.interceptors.muuntaja/format-negotiate,
+      :enter #function[muuntaja.interceptor/format-negotiate-interceptor/fn--277],
+      :leave nil,
+      :error nil,
+      :spec :reitit.http.interceptors.muuntaja/spec}
+     {:name :reitit.http.interceptors.muuntaja/format-response,
+      :enter nil,
+      :leave #function[muuntaja.interceptor/format-response-interceptor/fn--283],
+      :error nil,
+      :spec :reitit.http.interceptors.muuntaja/spec,
+      :data
+      {:swagger
+       {:produces #{"application/json" "application/transit+msgpack" "application/transit+json" "application/edn"}}}}
+     {:name :reitit.http.interceptors.exception/exception,
+      :enter nil,
+      :leave nil,
+      :error #function[reitit.http.interceptors.exception/exception-interceptor/fn--253],
+      :spec :reitit.http.interceptors.exception/spec}
+     {:name :reitit.http.interceptors.muuntaja/format-request,
+      :enter #function[muuntaja.interceptor/format-request-interceptor/fn--280],
+      :leave nil,
+      :error nil,
+      :spec :reitit.http.interceptors.muuntaja/spec,
+      :data
+      {:swagger
+       {:consumes #{"application/json" "application/transit+msgpack" "application/transit+json" "application/edn"}}}}
+     {:name :reitit.http.coercion/coerce-response, :enter nil, :leave nil, :error nil, :spec :reitit.spec/responses}
+     {:name :reitit.http.coercion/coerce-request, :enter nil, :leave nil, :error nil, :spec :reitit.spec/parameters}
+     {:name :reitit.interceptor/handler,
+      :enter #function[reitit.interceptor/fn--1639/fn--1640],
+      :leave nil,
+      :error nil,
+      :reitit.interceptor/handler #function[dex-api.people.http-in/eval9581/save--9586]}],
+    :queue
+    [{:name :reitit.http.interceptors.parameters/parameters,
+      :enter #function[reitit.http.interceptors.parameters/parameters-interceptor/fn--336],
+      :leave nil,
+      :error nil}
+     {:name :reitit.http.interceptors.muuntaja/format-negotiate,
+      :enter #function[muuntaja.interceptor/format-negotiate-interceptor/fn--277],
+      :leave nil,
+      :error nil,
+      :spec :reitit.http.interceptors.muuntaja/spec}
+     {:name :reitit.http.interceptors.muuntaja/format-response,
+      :enter nil,
+      :leave #function[muuntaja.interceptor/format-response-interceptor/fn--283],
+      :error nil,
+      :spec :reitit.http.interceptors.muuntaja/spec,
+      :data
+      {:swagger
+       {:produces #{"application/json" "application/transit+msgpack" "application/transit+json" "application/edn"}}}}
+     {:name :reitit.http.interceptors.exception/exception,
+      :enter nil,
+      :leave nil,
+      :error #function[reitit.http.interceptors.exception/exception-interceptor/fn--253],
+      :spec :reitit.http.interceptors.exception/spec}
+     {:name :reitit.http.interceptors.muuntaja/format-request,
+      :enter #function[muuntaja.interceptor/format-request-interceptor/fn--280],
+      :leave nil,
+      :error nil,
+      :spec :reitit.http.interceptors.muuntaja/spec,
+      :data
+      {:swagger
+       {:consumes #{"application/json" "application/transit+msgpack" "application/transit+json" "application/edn"}}}}
+     {:name :reitit.http.coercion/coerce-response, :enter nil, :leave nil, :error nil, :spec :reitit.spec/responses}
+     {:name :reitit.http.coercion/coerce-request, :enter nil, :leave nil, :error nil, :spec :reitit.spec/parameters}
+     {:name :reitit.interceptor/handler,
+      :enter #function[reitit.interceptor/fn--1639/fn--1640],
+      :leave nil,
+      :error nil,
+      :reitit.interceptor/handler #function[dex-api.people.http-in/eval9581/save--9586]}],
+    :handler nil,
+    :path "/people",
+    :method :post},
+   :put nil,
+   :delete nil,
+   :connect nil,
+   :options
+   {:data
+    {:coercion #Coercion{:name :schema},
+     :muuntaja <<Muuntaja>>,
+     :interceptors
+     [{:name :reitit.http.interceptors.parameters/parameters,
+       :compile #function[reitit.http.interceptors.parameters/parameters-interceptor/fn--332],
+       :enter #function[reitit.http.interceptors.parameters/parameters-interceptor/fn--336]}
+      {:name :reitit.http.interceptors.muuntaja/format-negotiate,
+       :spec :reitit.http.interceptors.muuntaja/spec,
+       :compile #function[reitit.http.interceptors.muuntaja/format-negotiate-interceptor/fn--307]}
+      {:name :reitit.http.interceptors.muuntaja/format-response,
+       :spec :reitit.http.interceptors.muuntaja/spec,
+       :compile #function[reitit.http.interceptors.muuntaja/format-response-interceptor/fn--321]}
+      {:name :reitit.http.interceptors.exception/exception,
+       :spec :reitit.http.interceptors.exception/spec,
+       :error #function[reitit.http.interceptors.exception/exception-interceptor/fn--253]}
+      {:name :reitit.http.interceptors.muuntaja/format-request,
+       :spec :reitit.http.interceptors.muuntaja/spec,
+       :compile #function[reitit.http.interceptors.muuntaja/format-request-interceptor/fn--314]}
+      {:name :reitit.http.coercion/coerce-response,
+       :spec :reitit.spec/responses,
+       :compile #function[reitit.http.coercion/coerce-response-interceptor/fn--345]}
+      {:name :reitit.http.coercion/coerce-request,
+       :spec :reitit.spec/parameters,
+       :compile #function[reitit.http.coercion/coerce-request-interceptor/fn--337]}],
+     :no-doc true,
+     :handler #function[reitit.ring/fn--1953/fn--1962]},
+    :interceptors
+    [{:name :reitit.http.interceptors.parameters/parameters,
+      :enter #function[reitit.http.interceptors.parameters/parameters-interceptor/fn--336],
+      :leave nil,
+      :error nil}
+     {:name :reitit.http.interceptors.muuntaja/format-negotiate,
+      :enter #function[muuntaja.interceptor/format-negotiate-interceptor/fn--277],
+      :leave nil,
+      :error nil,
+      :spec :reitit.http.interceptors.muuntaja/spec}
+     {:name :reitit.http.interceptors.muuntaja/format-response,
+      :enter nil,
+      :leave #function[muuntaja.interceptor/format-response-interceptor/fn--283],
+      :error nil,
+      :spec :reitit.http.interceptors.muuntaja/spec,
+      :data
+      {:swagger
+       {:produces #{"application/json" "application/transit+msgpack" "application/transit+json" "application/edn"}}}}
+     {:name :reitit.http.interceptors.exception/exception,
+      :enter nil,
+      :leave nil,
+      :error #function[reitit.http.interceptors.exception/exception-interceptor/fn--253],
+      :spec :reitit.http.interceptors.exception/spec}
+     {:name :reitit.http.interceptors.muuntaja/format-request,
+      :enter #function[muuntaja.interceptor/format-request-interceptor/fn--280],
+      :leave nil,
+      :error nil,
+      :spec :reitit.http.interceptors.muuntaja/spec,
+      :data
+      {:swagger
+       {:consumes #{"application/json" "application/transit+msgpack" "application/transit+json" "application/edn"}}}}
+     {:name :reitit.http.coercion/coerce-response, :enter nil, :leave nil, :error nil, :spec :reitit.spec/responses}
+     {:name :reitit.http.coercion/coerce-request, :enter nil, :leave nil, :error nil, :spec :reitit.spec/parameters}
+     {:name :reitit.interceptor/handler,
+      :enter #function[reitit.interceptor/fn--1639/fn--1640],
+      :leave nil,
+      :error nil,
+      :reitit.interceptor/handler #function[reitit.ring/fn--1953/fn--1962]}],
+    :queue
+    [{:name :reitit.http.interceptors.parameters/parameters,
+      :enter #function[reitit.http.interceptors.parameters/parameters-interceptor/fn--336],
+      :leave nil,
+      :error nil}
+     {:name :reitit.http.interceptors.muuntaja/format-negotiate,
+      :enter #function[muuntaja.interceptor/format-negotiate-interceptor/fn--277],
+      :leave nil,
+      :error nil,
+      :spec :reitit.http.interceptors.muuntaja/spec}
+     {:name :reitit.http.interceptors.muuntaja/format-response,
+      :enter nil,
+      :leave #function[muuntaja.interceptor/format-response-interceptor/fn--283],
+      :error nil,
+      :spec :reitit.http.interceptors.muuntaja/spec,
+      :data
+      {:swagger
+       {:produces #{"application/json" "application/transit+msgpack" "application/transit+json" "application/edn"}}}}
+     {:name :reitit.http.interceptors.exception/exception,
+      :enter nil,
+      :leave nil,
+      :error #function[reitit.http.interceptors.exception/exception-interceptor/fn--253],
+      :spec :reitit.http.interceptors.exception/spec}
+     {:name :reitit.http.interceptors.muuntaja/format-request,
+      :enter #function[muuntaja.interceptor/format-request-interceptor/fn--280],
+      :leave nil,
+      :error nil,
+      :spec :reitit.http.interceptors.muuntaja/spec,
+      :data
+      {:swagger
+       {:consumes #{"application/json" "application/transit+msgpack" "application/transit+json" "application/edn"}}}}
+     {:name :reitit.http.coercion/coerce-response, :enter nil, :leave nil, :error nil, :spec :reitit.spec/responses}
+     {:name :reitit.http.coercion/coerce-request, :enter nil, :leave nil, :error nil, :spec :reitit.spec/parameters}
+     {:name :reitit.interceptor/handler,
+      :enter #function[reitit.interceptor/fn--1639/fn--1640],
+      :leave nil,
+      :error nil,
+      :reitit.interceptor/handler #function[reitit.ring/fn--1953/fn--1962]}],
+    :handler nil,
+    :path "/people",
+    :method :options},
+   :trace nil,
+   :patch nil},
+  :path-params {},
+  :path "/people"},
+ :reitit.core/router
+ #object[reitit.core$mixed_router$reify__1388 0x7c9903d6 "reitit.core$mixed_router$reify__1388@7c9903d6"],
+ :protocol "HTTP/1.1",
+ :async-supported? true,
+ :remote-addr "[0:0:0:0:0:0:0:1]",
+ :params {},
+ :servlet-response #object[org.eclipse.jetty.server.Response 0x1dd01ed "null 200 \n\r\n"],
+ :body-params {:birthdate "20/02/1965", :email "selma.bouvier@yahoo.com", :name "Selma Bouvier"},
+ :servlet #object[io.pedestal.http.servlet.FnServlet 0x2e1d0e40 "io.pedestal.http.servlet.FnServlet@2e1d0e40"],
+ :headers
+ {"accept" "*/*",
+  "user-agent" "insomnia/2022.7.5",
+  "host" "localhost:8080",
+  "content-length" "93",
+  "content-type" "application/json"},
+ :server-port 8080,
+ :servlet-request #object[org.eclipse.jetty.server.Request 0x7eba9d67 "Request(null null)@7eba9d67"],
+ :muuntaja/request {:format "application/json", :charset "utf-8", :raw-format "application/json"},
+ :components
+ {:database
+  {:settings {:dbtype "postgresql", :host "localhost", :dbname "dex", :username "postgres", :password "postgres"},
+   :connection
+   {:connectable #object[com.zaxxer.hikari.HikariDataSource 0x7629e0b4 "HikariDataSource (null)"],
+    :options {:builder-fn #function[next.jdbc.result-set/as-unqualified-lower-maps]}}}},
+ :content-length 93,
+ :form-params {},
+ :query-params {},
+ :content-type "application/json",
+ :path-info "/people",
+ :character-encoding "UTF-8",
+ :uri "/people",
+ :server-name "localhost",
+ :query-string nil,
+ :path-params {},
+ :muuntaja/response {:format "application/json", :charset "utf-8", :raw-format "*/*"},
+ :body
+ #object[org.eclipse.jetty.server.HttpInputOverHTTP 0x1ee72e80 "HttpInputOverHTTP@1ee72e80[c=93,q=0,[0]=null,s=EOF]"],
+ :scheme :http,
+ :request-method :get,
+ :context-path ""}
+clj꞉dex-api.people.http-in꞉> 
+{:database
+ {:settings {:dbtype "postgresql", :host "localhost", :dbname "dex", :username "postgres", :password "postgres"},
+  :connection
+  {:connectable #object[com.zaxxer.hikari.HikariDataSource 0x7629e0b4 "HikariDataSource (null)"],
+   :options {:builder-fn #function[next.jdbc.result-set/as-unqualified-lower-maps]}}}}
+clj꞉dex-api.people.http-in꞉> 
+{:settings {:dbtype "postgresql", :host "localhost", :dbname "dex", :username "postgres", :password "postgres"},
+ :connection
+ {:connectable #object[com.zaxxer.hikari.HikariDataSource 0x7629e0b4 "HikariDataSource (null)"],
+  :options {:builder-fn #function[next.jdbc.result-set/as-unqualified-lower-maps]}}}
+clj꞉dex-api.people.http-in꞉> 
+; Evaluating file: http_in.clj
+#'dex-api.people.http-in/delete
+clj꞉dex-api.people.http-in꞉> 
+;; Stopping server
+;; Stopping service-map
+;; Stopping database
+{:database
+ {:settings {:dbtype "postgresql", :host "localhost", :dbname "dex", :username "postgres", :password "postgres"},
+  :connection nil},
+ :service-map
+ {:env :dev,
+  :db
+  {:settings {:dbtype "postgresql", :host "localhost", :dbname "dex", :username "postgres", :password "postgres"},
+   :connection
+   {:connectable #object[com.zaxxer.hikari.HikariDataSource 0x7629e0b4 "HikariDataSource (HikariPool-3)"],
+    :options {:builder-fn #function[next.jdbc.result-set/as-unqualified-lower-maps]}}},
+  :map nil},
+ :server
+ {:service
+  {:env :dev,
+   :db
+   {:settings {:dbtype "postgresql", :host "localhost", :dbname "dex", :username "postgres", :password "postgres"},
+    :connection
+    {:connectable #object[com.zaxxer.hikari.HikariDataSource 0x7629e0b4 "HikariDataSource (HikariPool-3)"],
+     :options {:builder-fn #function[next.jdbc.result-set/as-unqualified-lower-maps]}}},
+   :map
+   {:io.pedestal.http/port 8080,
+    :io.pedestal.http/service-fn #function[io.pedestal.http.impl.servlet-interceptor/interceptor-service-fn/fn--12922],
+    :io.pedestal.http/host "0.0.0.0",
+    :io.pedestal.http/secure-headers
+    {:content-security-policy-settings
+     {:default-src "'self'",
+      :style-src "'self' 'unsafe-inline'",
+      :script-src "'self' 'unsafe-inline'",
+      :img-src "'self' 'unsafe-inline' data: https://validator.swagger.io",
+      :object-src "'none'"}},
+    :io.pedestal.http/type :jetty,
+    :io.pedestal.http/start-fn #function[io.pedestal.http.jetty/server/fn--13146],
+    :env :dev,
+    :io.pedestal.http/allowed-origins {:creds true, :allowed-origins #function[clojure.core/constantly/fn--5672]},
+    :io.pedestal.http/resource-path "/public",
+    :io.pedestal.http/interceptors
+    [{:name :io.pedestal.http.impl.servlet-interceptor/exception-debug,
+      :enter nil,
+      :leave nil,
+      :error #function[io.pedestal.http.impl.servlet-interceptor/error-debug]}
+     {:name :reitit.http/router,
+      :enter #function[reitit.http/routing-interceptor/fn--2143],
+      :leave #function[reitit.http/routing-interceptor/fn--2148],
+      :error nil}
+     {:name :dex-api.interceptors.component/system-component-interceptor,
+      :enter #function[dex-api.interceptors.component/component-interceptor/fn--269],
+      :leave #function[dex-api.interceptors.component/component-interceptor/fn--271],
+      :error #function[dex-api.interceptors.component/component-interceptor/fn--273]}],
+    :io.pedestal.http/routes [],
+    :io.pedestal.http/servlet
+    #object[io.pedestal.http.servlet.FnServlet 0x2e1d0e40 "io.pedestal.http.servlet.FnServlet@2e1d0e40"],
+    :io.pedestal.http/server
+    #object[org.eclipse.jetty.server.Server 0x257aa7d4 "Server@257aa7d4{STOPPED}[9.4.48.v20220622]"],
+    :io.pedestal.http/join? false,
+    :io.pedestal.http/stop-fn #function[io.pedestal.http.jetty/server/fn--13148]}},
+  :jetty nil}}
+clj꞉dex-api.server꞉> 
+;; Stopping server
+;; Stopping service-map
+;; Stopping database
+{:database
+ {:settings {:dbtype "postgresql", :host "localhost", :dbname "dex", :username "postgres", :password "postgres"},
+  :connection nil},
+ :service-map
+ {:env :dev,
+  :db
+  {:settings {:dbtype "postgresql", :host "localhost", :dbname "dex", :username "postgres", :password "postgres"},
+   :connection
+   {:connectable #object[com.zaxxer.hikari.HikariDataSource 0x7629e0b4 "HikariDataSource (HikariPool-3)"],
+    :options {:builder-fn #function[next.jdbc.result-set/as-unqualified-lower-maps]}}},
+  :map nil},
+ :server
+ {:service
+  {:env :dev,
+   :db
+   {:settings {:dbtype "postgresql", :host "localhost", :dbname "dex", :username "postgres", :password "postgres"},
+    :connection
+    {:connectable #object[com.zaxxer.hikari.HikariDataSource 0x7629e0b4 "HikariDataSource (HikariPool-3)"],
+     :options {:builder-fn #function[next.jdbc.result-set/as-unqualified-lower-maps]}}},
+   :map
+   {:io.pedestal.http/port 8080,
+    :io.pedestal.http/service-fn #function[io.pedestal.http.impl.servlet-interceptor/interceptor-service-fn/fn--12922],
+    :io.pedestal.http/host "0.0.0.0",
+    :io.pedestal.http/secure-headers
+    {:content-security-policy-settings
+     {:default-src "'self'",
+      :style-src "'self' 'unsafe-inline'",
+      :script-src "'self' 'unsafe-inline'",
+      :img-src "'self' 'unsafe-inline' data: https://validator.swagger.io",
+      :object-src "'none'"}},
+    :io.pedestal.http/type :jetty,
+    :io.pedestal.http/start-fn #function[io.pedestal.http.jetty/server/fn--13146],
+    :env :dev,
+    :io.pedestal.http/allowed-origins {:creds true, :allowed-origins #function[clojure.core/constantly/fn--5672]},
+    :io.pedestal.http/resource-path "/public",
+    :io.pedestal.http/interceptors
+    [{:name :io.pedestal.http.impl.servlet-interceptor/exception-debug,
+      :enter nil,
+      :leave nil,
+      :error #function[io.pedestal.http.impl.servlet-interceptor/error-debug]}
+     {:name :reitit.http/router,
+      :enter #function[reitit.http/routing-interceptor/fn--2143],
+      :leave #function[reitit.http/routing-interceptor/fn--2148],
+      :error nil}
+     {:name :dex-api.interceptors.component/system-component-interceptor,
+      :enter #function[dex-api.interceptors.component/component-interceptor/fn--269],
+      :leave #function[dex-api.interceptors.component/component-interceptor/fn--271],
+      :error #function[dex-api.interceptors.component/component-interceptor/fn--273]}],
+    :io.pedestal.http/routes [],
+    :io.pedestal.http/servlet
+    #object[io.pedestal.http.servlet.FnServlet 0x2e1d0e40 "io.pedestal.http.servlet.FnServlet@2e1d0e40"],
+    :io.pedestal.http/server
+    #object[org.eclipse.jetty.server.Server 0x257aa7d4 "Server@257aa7d4{STOPPED}[9.4.48.v20220622]"],
+    :io.pedestal.http/join? false,
+    :io.pedestal.http/stop-fn #function[io.pedestal.http.jetty/server/fn--13148]}},
+  :jetty nil}}
+clj꞉dex-api.server꞉> 
+{:database
+ {:settings {:dbtype "postgresql", :host "localhost", :dbname "dex", :username "postgres", :password "postgres"},
+  :connection
+  {:connectable #object[com.zaxxer.hikari.HikariDataSource 0x7629e0b4 "HikariDataSource (HikariPool-3)"],
+   :options {:builder-fn #function[next.jdbc.result-set/as-unqualified-lower-maps]}}},
+ :service-map
+ {:env :dev,
+  :db
+  {:settings {:dbtype "postgresql", :host "localhost", :dbname "dex", :username "postgres", :password "postgres"},
+   :connection
+   {:connectable #object[com.zaxxer.hikari.HikariDataSource 0x7629e0b4 "HikariDataSource (HikariPool-3)"],
+    :options {:builder-fn #function[next.jdbc.result-set/as-unqualified-lower-maps]}}},
+  :map
+  {:io.pedestal.http/port 8080,
+   :io.pedestal.http/service-fn #function[io.pedestal.http.impl.servlet-interceptor/interceptor-service-fn/fn--12922],
+   :io.pedestal.http/host "0.0.0.0",
+   :io.pedestal.http/secure-headers
+   {:content-security-policy-settings
+    {:default-src "'self'",
+     :style-src "'self' 'unsafe-inline'",
+     :script-src "'self' 'unsafe-inline'",
+     :img-src "'self' 'unsafe-inline' data: https://validator.swagger.io",
+     :object-src "'none'"}},
+   :io.pedestal.http/type :jetty,
+   :io.pedestal.http/start-fn #function[io.pedestal.http.jetty/server/fn--13146],
+   :env :dev,
+   :io.pedestal.http/allowed-origins {:creds true, :allowed-origins #function[clojure.core/constantly/fn--5672]},
+   :io.pedestal.http/resource-path "/public",
+   :io.pedestal.http/interceptors
+   [{:name :io.pedestal.http.impl.servlet-interceptor/exception-debug,
+     :enter nil,
+     :leave nil,
+     :error #function[io.pedestal.http.impl.servlet-interceptor/error-debug]}
+    {:name :reitit.http/router,
+     :enter #function[reitit.http/routing-interceptor/fn--2143],
+     :leave #function[reitit.http/routing-interceptor/fn--2148],
+     :error nil}
+    {:name :dex-api.interceptors.component/system-component-interceptor,
+     :enter #function[dex-api.interceptors.component/component-interceptor/fn--269],
+     :leave #function[dex-api.interceptors.component/component-interceptor/fn--271],
+     :error #function[dex-api.interceptors.component/component-interceptor/fn--273]}],
+   :io.pedestal.http/routes [],
+   :io.pedestal.http/servlet
+   #object[io.pedestal.http.servlet.FnServlet 0x2e1d0e40 "io.pedestal.http.servlet.FnServlet@2e1d0e40"],
+   :io.pedestal.http/server
+   #object[org.eclipse.jetty.server.Server 0x257aa7d4 "Server@257aa7d4{STOPPED}[9.4.48.v20220622]"],
+   :io.pedestal.http/join? false,
+   :io.pedestal.http/stop-fn #function[io.pedestal.http.jetty/server/fn--13148]}},
+ :server
+ {:service
+  {:env :dev,
+   :db
+   {:settings {:dbtype "postgresql", :host "localhost", :dbname "dex", :username "postgres", :password "postgres"},
+    :connection
+    {:connectable #object[com.zaxxer.hikari.HikariDataSource 0x7629e0b4 "HikariDataSource (HikariPool-3)"],
+     :options {:builder-fn #function[next.jdbc.result-set/as-unqualified-lower-maps]}}},
+   :map
+   {:io.pedestal.http/port 8080,
+    :io.pedestal.http/service-fn #function[io.pedestal.http.impl.servlet-interceptor/interceptor-service-fn/fn--12922],
+    :io.pedestal.http/host "0.0.0.0",
+    :io.pedestal.http/secure-headers
+    {:content-security-policy-settings
+     {:default-src "'self'",
+      :style-src "'self' 'unsafe-inline'",
+      :script-src "'self' 'unsafe-inline'",
+      :img-src "'self' 'unsafe-inline' data: https://validator.swagger.io",
+      :object-src "'none'"}},
+    :io.pedestal.http/type :jetty,
+    :io.pedestal.http/start-fn #function[io.pedestal.http.jetty/server/fn--13146],
+    :env :dev,
+    :io.pedestal.http/allowed-origins {:creds true, :allowed-origins #function[clojure.core/constantly/fn--5672]},
+    :io.pedestal.http/resource-path "/public",
+    :io.pedestal.http/interceptors
+    [{:name :io.pedestal.http.impl.servlet-interceptor/exception-debug,
+      :enter nil,
+      :leave nil,
+      :error #function[io.pedestal.http.impl.servlet-interceptor/error-debug]}
+     {:name :reitit.http/router,
+      :enter #function[reitit.http/routing-interceptor/fn--2143],
+      :leave #function[reitit.http/routing-interceptor/fn--2148],
+      :error nil}
+     {:name :dex-api.interceptors.component/system-component-interceptor,
+      :enter #function[dex-api.interceptors.component/component-interceptor/fn--269],
+      :leave #function[dex-api.interceptors.component/component-interceptor/fn--271],
+      :error #function[dex-api.interceptors.component/component-interceptor/fn--273]}],
+    :io.pedestal.http/routes [],
+    :io.pedestal.http/servlet
+    #object[io.pedestal.http.servlet.FnServlet 0x2e1d0e40 "io.pedestal.http.servlet.FnServlet@2e1d0e40"],
+    :io.pedestal.http/server
+    #object[org.eclipse.jetty.server.Server 0x257aa7d4 "Server@257aa7d4{STOPPED}[9.4.48.v20220622]"],
+    :io.pedestal.http/join? false,
+    :io.pedestal.http/stop-fn #function[io.pedestal.http.jetty/server/fn--13148]}},
+  :jetty
+  {:io.pedestal.http/port 8080,
+   :io.pedestal.http/service-fn #function[io.pedestal.http.impl.servlet-interceptor/interceptor-service-fn/fn--12922],
+   :io.pedestal.http/host "0.0.0.0",
+   :io.pedestal.http/secure-headers
+   {:content-security-policy-settings
+    {:default-src "'self'",
+     :style-src "'self' 'unsafe-inline'",
+     :script-src "'self' 'unsafe-inline'",
+     :img-src "'self' 'unsafe-inline' data: https://validator.swagger.io",
+     :object-src "'none'"}},
+   :io.pedestal.http/type :jetty,
+   :io.pedestal.http/start-fn #function[io.pedestal.http.jetty/server/fn--13146],
+   :env :dev,
+   :io.pedestal.http/allowed-origins {:creds true, :allowed-origins #function[clojure.core/constantly/fn--5672]},
+   :io.pedestal.http/resource-path "/public",
+   :io.pedestal.http/interceptors
+   [{:name :io.pedestal.http.impl.servlet-interceptor/exception-debug,
+     :enter nil,
+     :leave nil,
+     :error #function[io.pedestal.http.impl.servlet-interceptor/error-debug]}
+    {:name :reitit.http/router,
+     :enter #function[reitit.http/routing-interceptor/fn--2143],
+     :leave #function[reitit.http/routing-interceptor/fn--2148],
+     :error nil}
+    {:name :dex-api.interceptors.component/system-component-interceptor,
+     :enter #function[dex-api.interceptors.component/component-interceptor/fn--269],
+     :leave #function[dex-api.interceptors.component/component-interceptor/fn--271],
+     :error #function[dex-api.interceptors.component/component-interceptor/fn--273]}],
+   :io.pedestal.http/routes [],
+   :io.pedestal.http/servlet
+   #object[io.pedestal.http.servlet.FnServlet 0x2e1d0e40 "io.pedestal.http.servlet.FnServlet@2e1d0e40"],
+   :io.pedestal.http/server
+   #object[org.eclipse.jetty.server.Server 0x257aa7d4 "Server@257aa7d4{STOPPED}[9.4.48.v20220622]"],
+   :io.pedestal.http/join? false,
+   :io.pedestal.http/stop-fn #function[io.pedestal.http.jetty/server/fn--13148]}}}
+clj꞉dex-api.server꞉> 
+;; Stopping server
+;; Stopping service-map
+;; Stopping database
+{:database
+ {:settings {:dbtype "postgresql", :host "localhost", :dbname "dex", :username "postgres", :password "postgres"},
+  :connection nil},
+ :service-map
+ {:env :dev,
+  :db
+  {:settings {:dbtype "postgresql", :host "localhost", :dbname "dex", :username "postgres", :password "postgres"},
+   :connection
+   {:connectable #object[com.zaxxer.hikari.HikariDataSource 0x7629e0b4 "HikariDataSource (HikariPool-3)"],
+    :options {:builder-fn #function[next.jdbc.result-set/as-unqualified-lower-maps]}}},
+  :map nil},
+ :server
+ {:service
+  {:env :dev,
+   :db
+   {:settings {:dbtype "postgresql", :host "localhost", :dbname "dex", :username "postgres", :password "postgres"},
+    :connection
+    {:connectable #object[com.zaxxer.hikari.HikariDataSource 0x7629e0b4 "HikariDataSource (HikariPool-3)"],
+     :options {:builder-fn #function[next.jdbc.result-set/as-unqualified-lower-maps]}}},
+   :map
+   {:io.pedestal.http/port 8080,
+    :io.pedestal.http/service-fn #function[io.pedestal.http.impl.servlet-interceptor/interceptor-service-fn/fn--12922],
+    :io.pedestal.http/host "0.0.0.0",
+    :io.pedestal.http/secure-headers
+    {:content-security-policy-settings
+     {:default-src "'self'",
+      :style-src "'self' 'unsafe-inline'",
+      :script-src "'self' 'unsafe-inline'",
+      :img-src "'self' 'unsafe-inline' data: https://validator.swagger.io",
+      :object-src "'none'"}},
+    :io.pedestal.http/type :jetty,
+    :io.pedestal.http/start-fn #function[io.pedestal.http.jetty/server/fn--13146],
+    :env :dev,
+    :io.pedestal.http/allowed-origins {:creds true, :allowed-origins #function[clojure.core/constantly/fn--5672]},
+    :io.pedestal.http/resource-path "/public",
+    :io.pedestal.http/interceptors
+    [{:name :io.pedestal.http.impl.servlet-interceptor/exception-debug,
+      :enter nil,
+      :leave nil,
+      :error #function[io.pedestal.http.impl.servlet-interceptor/error-debug]}
+     {:name :reitit.http/router,
+      :enter #function[reitit.http/routing-interceptor/fn--2143],
+      :leave #function[reitit.http/routing-interceptor/fn--2148],
+      :error nil}
+     {:name :dex-api.interceptors.component/system-component-interceptor,
+      :enter #function[dex-api.interceptors.component/component-interceptor/fn--269],
+      :leave #function[dex-api.interceptors.component/component-interceptor/fn--271],
+      :error #function[dex-api.interceptors.component/component-interceptor/fn--273]}],
+    :io.pedestal.http/routes [],
+    :io.pedestal.http/servlet
+    #object[io.pedestal.http.servlet.FnServlet 0x2e1d0e40 "io.pedestal.http.servlet.FnServlet@2e1d0e40"],
+    :io.pedestal.http/server
+    #object[org.eclipse.jetty.server.Server 0x257aa7d4 "Server@257aa7d4{STOPPED}[9.4.48.v20220622]"],
+    :io.pedestal.http/join? false,
+    :io.pedestal.http/stop-fn #function[io.pedestal.http.jetty/server/fn--13148]}},
+  :jetty nil}}
+clj꞉dex-api.server꞉> 
+;; Stopping server
+;; Stopping service-map
+;; Stopping database
+{:database
+ {:settings {:dbtype "postgresql", :host "localhost", :dbname "dex", :username "postgres", :password "postgres"},
+  :connection nil},
+ :service-map
+ {:env :dev,
+  :db
+  {:settings {:dbtype "postgresql", :host "localhost", :dbname "dex", :username "postgres", :password "postgres"},
+   :connection
+   {:connectable #object[com.zaxxer.hikari.HikariDataSource 0x7629e0b4 "HikariDataSource (HikariPool-3)"],
+    :options {:builder-fn #function[next.jdbc.result-set/as-unqualified-lower-maps]}}},
+  :map nil},
+ :server
+ {:service
+  {:env :dev,
+   :db
+   {:settings {:dbtype "postgresql", :host "localhost", :dbname "dex", :username "postgres", :password "postgres"},
+    :connection
+    {:connectable #object[com.zaxxer.hikari.HikariDataSource 0x7629e0b4 "HikariDataSource (HikariPool-3)"],
+     :options {:builder-fn #function[next.jdbc.result-set/as-unqualified-lower-maps]}}},
+   :map
+   {:io.pedestal.http/port 8080,
+    :io.pedestal.http/service-fn #function[io.pedestal.http.impl.servlet-interceptor/interceptor-service-fn/fn--12922],
+    :io.pedestal.http/host "0.0.0.0",
+    :io.pedestal.http/secure-headers
+    {:content-security-policy-settings
+     {:default-src "'self'",
+      :style-src "'self' 'unsafe-inline'",
+      :script-src "'self' 'unsafe-inline'",
+      :img-src "'self' 'unsafe-inline' data: https://validator.swagger.io",
+      :object-src "'none'"}},
+    :io.pedestal.http/type :jetty,
+    :io.pedestal.http/start-fn #function[io.pedestal.http.jetty/server/fn--13146],
+    :env :dev,
+    :io.pedestal.http/allowed-origins {:creds true, :allowed-origins #function[clojure.core/constantly/fn--5672]},
+    :io.pedestal.http/resource-path "/public",
+    :io.pedestal.http/interceptors
+    [{:name :io.pedestal.http.impl.servlet-interceptor/exception-debug,
+      :enter nil,
+      :leave nil,
+      :error #function[io.pedestal.http.impl.servlet-interceptor/error-debug]}
+     {:name :reitit.http/router,
+      :enter #function[reitit.http/routing-interceptor/fn--2143],
+      :leave #function[reitit.http/routing-interceptor/fn--2148],
+      :error nil}
+     {:name :dex-api.interceptors.component/system-component-interceptor,
+      :enter #function[dex-api.interceptors.component/component-interceptor/fn--269],
+      :leave #function[dex-api.interceptors.component/component-interceptor/fn--271],
+      :error #function[dex-api.interceptors.component/component-interceptor/fn--273]}],
+    :io.pedestal.http/routes [],
+    :io.pedestal.http/servlet
+    #object[io.pedestal.http.servlet.FnServlet 0x2e1d0e40 "io.pedestal.http.servlet.FnServlet@2e1d0e40"],
+    :io.pedestal.http/server
+    #object[org.eclipse.jetty.server.Server 0x257aa7d4 "Server@257aa7d4{STOPPED}[9.4.48.v20220622]"],
+    :io.pedestal.http/join? false,
+    :io.pedestal.http/stop-fn #function[io.pedestal.http.jetty/server/fn--13148]}},
+  :jetty nil}}
+clj꞉dex-api.server꞉> 
+;; Starting database
+;; Starting service-map
+
+Creating your [DEV] server...
+;; Starting server
+#'dex-api.server/app
+clj꞉dex-api.server꞉> 
+; nREPL Connection was closed
+; Jacking in...
+; Connecting using "Leiningen" project type.
+; You can make Calva auto-select this:
+; "calva.autoSelectReplConnectProjectType": "Leiningen"
+;   - See https://calva.io/connect/#auto-select-project-type
+; 
+; Starting Jack-in Terminal: lein update-in :dependencies conj '[nrepl,"1.0.0"]' -- update-in :plugins conj '[cider/cider-nrepl,"0.28.5"]' -- update-in '[:repl-options,:nrepl-middleware]' conj '["cider.nrepl/cider-middleware"]' -- with-profile +dev,+uberjar repl :headless
+; Hooking up nREPL sessions...
+; Connected session: clj
+; TIPS:
+;   - You can edit the contents here. Use it as a REPL if you like.
+;   - `alt+enter` evaluates the current top level form.
+;   - `ctrl+enter` evaluates the current form.
+;   - `alt+up` and `alt+down` traverse up and down the REPL command history
+;      when the cursor is after the last contents at the prompt
+;   - Clojure lines in stack traces are peekable and clickable.
+clj꞉dex-api.server꞉> 
+; Jack-in done.
+clj꞉dex-api.server꞉> 
+;; Starting database
+;; Starting service-map
+
+Creating your [DEV] server...
+;; Starting server
+#'dex-api.server/app
+clj꞉dex-api.server꞉> 
+#inst "1930-02-01T00:00:00.000-00:00"
+clj꞉dex-api.people.adapters꞉> 
+java.util.Date
+clj꞉dex-api.people.adapters꞉> 
+; Evaluating file: adapters.clj
+nil
+clj꞉dex-api.people.adapters꞉> 
+; Evaluating file: adapters.clj
+nil
+clj꞉dex-api.people.adapters꞉> 
+;; Stopping server
+;; Stopping service-map
+;; Stopping database
+{:database
+ {:settings {:dbtype "postgresql", :host "localhost", :dbname "dex", :username "postgres", :password "postgres"},
+  :connection nil},
+ :service-map
+ {:env :dev,
+  :db
+  {:settings {:dbtype "postgresql", :host "localhost", :dbname "dex", :username "postgres", :password "postgres"},
+   :connection
+   {:connectable #object[com.zaxxer.hikari.HikariDataSource 0x226a2ed "HikariDataSource (HikariPool-1)"],
+    :options {:builder-fn #function[next.jdbc.result-set/as-unqualified-lower-maps]}}},
+  :map nil},
+ :server
+ {:service
+  {:env :dev,
+   :db
+   {:settings {:dbtype "postgresql", :host "localhost", :dbname "dex", :username "postgres", :password "postgres"},
+    :connection
+    {:connectable #object[com.zaxxer.hikari.HikariDataSource 0x226a2ed "HikariDataSource (HikariPool-1)"],
+     :options {:builder-fn #function[next.jdbc.result-set/as-unqualified-lower-maps]}}},
+   :map
+   {:io.pedestal.http/port 8080,
+    :io.pedestal.http/service-fn #function[io.pedestal.http.impl.servlet-interceptor/interceptor-service-fn/fn--12922],
+    :io.pedestal.http/host "0.0.0.0",
+    :io.pedestal.http/secure-headers
+    {:content-security-policy-settings
+     {:default-src "'self'",
+      :style-src "'self' 'unsafe-inline'",
+      :script-src "'self' 'unsafe-inline'",
+      :img-src "'self' 'unsafe-inline' data: https://validator.swagger.io",
+      :object-src "'none'"}},
+    :io.pedestal.http/type :jetty,
+    :io.pedestal.http/start-fn #function[io.pedestal.http.jetty/server/fn--13146],
+    :env :dev,
+    :io.pedestal.http/allowed-origins {:creds true, :allowed-origins #function[clojure.core/constantly/fn--5672]},
+    :io.pedestal.http/resource-path "/public",
+    :io.pedestal.http/interceptors
+    [{:name :io.pedestal.http.impl.servlet-interceptor/exception-debug,
+      :enter nil,
+      :leave nil,
+      :error #function[io.pedestal.http.impl.servlet-interceptor/error-debug]}
+     {:name :reitit.http/router,
+      :enter #function[reitit.http/routing-interceptor/fn--2143],
+      :leave #function[reitit.http/routing-interceptor/fn--2148],
+      :error nil}
+     {:name :dex-api.interceptors.component/system-component-interceptor,
+      :enter #function[dex-api.interceptors.component/component-interceptor/fn--269],
+      :leave #function[dex-api.interceptors.component/component-interceptor/fn--271],
+      :error #function[dex-api.interceptors.component/component-interceptor/fn--273]}],
+    :io.pedestal.http/routes [],
+    :io.pedestal.http/servlet
+    #object[io.pedestal.http.servlet.FnServlet 0x2d146f9c "io.pedestal.http.servlet.FnServlet@2d146f9c"],
+    :io.pedestal.http/server
+    #object[org.eclipse.jetty.server.Server 0x34aeee6e "Server@34aeee6e{STOPPED}[9.4.48.v20220622]"],
+    :io.pedestal.http/join? false,
+    :io.pedestal.http/stop-fn #function[io.pedestal.http.jetty/server/fn--13148]}},
+  :jetty nil}}
+clj꞉dex-api.server꞉> 
+;; Starting database
+;; Starting service-map
+
+Creating your [DEV] server...
+;; Starting server
+#'dex-api.server/app
+clj꞉dex-api.server꞉> 
+; Evaluating file: schemas.clj
+#'dex-api.configuration.schemas/ring-response
+clj꞉dex-api.configuration.schemas꞉> 
+;; Stopping server
+;; Stopping service-map
+;; Stopping database
+{:database
+ {:settings {:dbtype "postgresql", :host "localhost", :dbname "dex", :username "postgres", :password "postgres"},
+  :connection nil},
+ :service-map
+ {:env :dev,
+  :db
+  {:settings {:dbtype "postgresql", :host "localhost", :dbname "dex", :username "postgres", :password "postgres"},
+   :connection
+   {:connectable #object[com.zaxxer.hikari.HikariDataSource 0x3e0c935e "HikariDataSource (HikariPool-2)"],
+    :options {:builder-fn #function[next.jdbc.result-set/as-unqualified-lower-maps]}}},
+  :map nil},
+ :server
+ {:service
+  {:env :dev,
+   :db
+   {:settings {:dbtype "postgresql", :host "localhost", :dbname "dex", :username "postgres", :password "postgres"},
+    :connection
+    {:connectable #object[com.zaxxer.hikari.HikariDataSource 0x3e0c935e "HikariDataSource (HikariPool-2)"],
+     :options {:builder-fn #function[next.jdbc.result-set/as-unqualified-lower-maps]}}},
+   :map
+   {:io.pedestal.http/port 8080,
+    :io.pedestal.http/service-fn #function[io.pedestal.http.impl.servlet-interceptor/interceptor-service-fn/fn--12922],
+    :io.pedestal.http/host "0.0.0.0",
+    :io.pedestal.http/secure-headers
+    {:content-security-policy-settings
+     {:default-src "'self'",
+      :style-src "'self' 'unsafe-inline'",
+      :script-src "'self' 'unsafe-inline'",
+      :img-src "'self' 'unsafe-inline' data: https://validator.swagger.io",
+      :object-src "'none'"}},
+    :io.pedestal.http/type :jetty,
+    :io.pedestal.http/start-fn #function[io.pedestal.http.jetty/server/fn--13146],
+    :env :dev,
+    :io.pedestal.http/allowed-origins {:creds true, :allowed-origins #function[clojure.core/constantly/fn--5672]},
+    :io.pedestal.http/resource-path "/public",
+    :io.pedestal.http/interceptors
+    [{:name :io.pedestal.http.impl.servlet-interceptor/exception-debug,
+      :enter nil,
+      :leave nil,
+      :error #function[io.pedestal.http.impl.servlet-interceptor/error-debug]}
+     {:name :reitit.http/router,
+      :enter #function[reitit.http/routing-interceptor/fn--2143],
+      :leave #function[reitit.http/routing-interceptor/fn--2148],
+      :error nil}
+     {:name :dex-api.interceptors.component/system-component-interceptor,
+      :enter #function[dex-api.interceptors.component/component-interceptor/fn--269],
+      :leave #function[dex-api.interceptors.component/component-interceptor/fn--271],
+      :error #function[dex-api.interceptors.component/component-interceptor/fn--273]}],
+    :io.pedestal.http/routes [],
+    :io.pedestal.http/servlet
+    #object[io.pedestal.http.servlet.FnServlet 0xdef732 "io.pedestal.http.servlet.FnServlet@def732"],
+    :io.pedestal.http/server
+    #object[org.eclipse.jetty.server.Server 0xb226828 "Server@b226828{STOPPED}[9.4.48.v20220622]"],
+    :io.pedestal.http/join? false,
+    :io.pedestal.http/stop-fn #function[io.pedestal.http.jetty/server/fn--13148]}},
+  :jetty nil}}
+clj꞉dex-api.server꞉> 
+;; Starting database
+;; Starting service-map
+
+Creating your [DEV] server...
+;; Starting server
+#'dex-api.server/app
+clj꞉dex-api.server꞉> 
+; Evaluating file: schemas.clj
+#'dex-api.configuration.schemas/ring-response
+clj꞉dex-api.configuration.schemas꞉> 
+; Evaluating file: adapters.clj
+nil
+clj꞉dex-api.people.adapters꞉> 
+; Evaluating file: routes.clj
+#'dex-api.routes/routes
+clj꞉dex-api.routes꞉> 
+;; Stopping server
+;; Stopping service-map
+;; Stopping database
+{:database
+ {:settings {:dbtype "postgresql", :host "localhost", :dbname "dex", :username "postgres", :password "postgres"},
+  :connection nil},
+ :service-map
+ {:env :dev,
+  :db
+  {:settings {:dbtype "postgresql", :host "localhost", :dbname "dex", :username "postgres", :password "postgres"},
+   :connection
+   {:connectable #object[com.zaxxer.hikari.HikariDataSource 0x5803f905 "HikariDataSource (HikariPool-3)"],
+    :options {:builder-fn #function[next.jdbc.result-set/as-unqualified-lower-maps]}}},
+  :map nil},
+ :server
+ {:service
+  {:env :dev,
+   :db
+   {:settings {:dbtype "postgresql", :host "localhost", :dbname "dex", :username "postgres", :password "postgres"},
+    :connection
+    {:connectable #object[com.zaxxer.hikari.HikariDataSource 0x5803f905 "HikariDataSource (HikariPool-3)"],
+     :options {:builder-fn #function[next.jdbc.result-set/as-unqualified-lower-maps]}}},
+   :map
+   {:io.pedestal.http/port 8080,
+    :io.pedestal.http/service-fn #function[io.pedestal.http.impl.servlet-interceptor/interceptor-service-fn/fn--12922],
+    :io.pedestal.http/host "0.0.0.0",
+    :io.pedestal.http/secure-headers
+    {:content-security-policy-settings
+     {:default-src "'self'",
+      :style-src "'self' 'unsafe-inline'",
+      :script-src "'self' 'unsafe-inline'",
+      :img-src "'self' 'unsafe-inline' data: https://validator.swagger.io",
+      :object-src "'none'"}},
+    :io.pedestal.http/type :jetty,
+    :io.pedestal.http/start-fn #function[io.pedestal.http.jetty/server/fn--13146],
+    :env :dev,
+    :io.pedestal.http/allowed-origins {:creds true, :allowed-origins #function[clojure.core/constantly/fn--5672]},
+    :io.pedestal.http/resource-path "/public",
+    :io.pedestal.http/interceptors
+    [{:name :io.pedestal.http.impl.servlet-interceptor/exception-debug,
+      :enter nil,
+      :leave nil,
+      :error #function[io.pedestal.http.impl.servlet-interceptor/error-debug]}
+     {:name :reitit.http/router,
+      :enter #function[reitit.http/routing-interceptor/fn--2143],
+      :leave #function[reitit.http/routing-interceptor/fn--2148],
+      :error nil}
+     {:name :dex-api.interceptors.component/system-component-interceptor,
+      :enter #function[dex-api.interceptors.component/component-interceptor/fn--269],
+      :leave #function[dex-api.interceptors.component/component-interceptor/fn--271],
+      :error #function[dex-api.interceptors.component/component-interceptor/fn--273]}],
+    :io.pedestal.http/routes [],
+    :io.pedestal.http/servlet
+    #object[io.pedestal.http.servlet.FnServlet 0x6920d7fe "io.pedestal.http.servlet.FnServlet@6920d7fe"],
+    :io.pedestal.http/server
+    #object[org.eclipse.jetty.server.Server 0x1e44f49e "Server@1e44f49e{STOPPED}[9.4.48.v20220622]"],
+    :io.pedestal.http/join? false,
+    :io.pedestal.http/stop-fn #function[io.pedestal.http.jetty/server/fn--13148]}},
+  :jetty nil}}
+clj꞉dex-api.server꞉> 
+;; Starting database
+;; Starting service-map
+
+Creating your [DEV] server...
+;; Starting server
+#'dex-api.server/app
+clj꞉dex-api.server꞉> 
